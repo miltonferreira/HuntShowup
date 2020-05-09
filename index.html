@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Community SA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/discordInvite.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img id="logoHunt" src="assets/img/logo1.png" alt="Logo Hunt Showdown"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="icons-social">
+                <a href="https://discord.gg/sRtaCch" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/discord-red.png" alt="logo discord"></a>
+                <a href="https://www.twitch.tv/directory/game/Hunt%3A%20Showdown" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/twitch-red.png" alt="logo twitch"></a>
+                <a href="https://www.instagram.com/huntthegame" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/instagram-red.png" alt="logo instagram"></a>
+                <a href="https://www.youtube.com/user/CrytekHunt" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/youtube-red.png" alt="logo youtube"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="https://store.steampowered.com/app/594650/Hunt_Showdown/" target="_blank">Comprar Game</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="img_banner">
+        <h1>Hunt Community SA</h1>
+    </div>
+
+    <main>
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    
+                    <h2>Quem somos</h2>
+                    <p>
+                        <img id="img_right" src="https://assets.b9.com.br/wp-content/uploads/2018/10/discord-b9.jpg" alt="">
+                        Essa comunidade foi criada para unir os jogadores de Hunt Showdown da América do sul, todos aqueles que jogam ou acabaram 
+                        de conhecer o jogo são bem-vindos, todos serão acolhidos para desfrutar e se divertir na nossa comunidade. Buscamos com essa 
+                        iniciativa, uma comunicação direta com a crytek, passando o que achamos do jogo atual, o que precisa ser melhorado e o que vem 
+                        dando certo, conforme feedback dos jogadores da nossa comunidade.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <div id="discordInviteBox"></div>
+                </li>
+                <li class="list-group-item">
+                    <h2 id="title-right">Você é novo no game</h2>
+                    <p>
+                        <img id="img_left" src="https://preview.redd.it/3ja7cq1mm3b31.png?width=1920&format=png&auto=webp&s=5ebccf01364a159339d04d0a8289bbda24783451" alt="">
+                        Hunt é um jogo desafiador até para os mais experientes, caso você seja iniciante e queria conhecer melhor o game, ou está sentindo 
+                        dificuldades em jogar pois está achando tudo muito difícil, entre em nosso discord, temos pessoas dispostas em ajudar você dentro do 
+                        game, como temos jogadores que jogam desde a versão beta, eles conhecem muito sobre como jogar da melhor forma e querem trazer novos 
+                        jogadores que se interessam pelo hunt.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    
+                    <h2>Streamers de Hunt</h2>
+                    <p>
+                        <img id="img_right" src="https://s2.glbimg.com/4mjvS5ramaSR9AGflvuGUf_PhBQ=/0x0:695x390/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/J/X/1RtkBsRm6HsngXbBxDBA/twitch-como-criar-emotes-canal-guia-1.jpg" alt="">
+                        Também temos uma rede de streamers que jogam Hunt e estão empenhados em divulgar e fazer o game crescer em nossa região. Caso você 
+                        também seja um streamer e deseja entrar nessa rede entre em contato com a gente pelo discord. Estamos tentando junto a crytek, criar 
+                        parceria relativo ao jogo com streamers que gostam de jogá-lo em sua live, mostrando para mais pessoas que o hunt vai mais além 
+                        de um battle-royale casual do mercado.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h3>Streamer Transmitindo Hunt nesse momento</h3>
+                        <div id="player-twitch" class="container">
+                
+                        <!-- Add a placeholder for the Twitch embed -->
+                        <div id="twitch-embed"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <!--
+            Create a Twitch.Embed object that will render
+            within the "twitch-embed" root element.
+            -->
+            <script type="text/javascript">
+            var embed = new Twitch.Embed("twitch-embed", {
+                width: 600,
+                height: 400,
+                channel: "lenzer0",
+                layout: "video",
+                autoplay: false,
+                // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+                parent: ["embed.example.com", "othersite.example.com"]
+            });
+
+            embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                var player = embed.getPlayer();
+                player.pause();
+            });
+            </script>
+            <script src="assets/js/discordInvite.js"></script>
+            <script>
+              discordInvite.init({
+              inviteCode: 'sRtaCch',
+              title: 'Hunt Community SA',
+            });
+            discordInvite.render();
+            </script>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados - 2020</p>
+    </footer>
+</body>
+</html>

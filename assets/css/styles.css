@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logoHunt{
+    height: 50px;
+    width: auto;
+}
+
+#icons-social {
+    margin: 0 auto;
+}
+
+#icons-social img{
+    height: 50px;
+    width: auto;
+    padding: 0 5px;
+}
+
+body {
+    height: 200vh;
+}
+
+/* nav */
+.navbar{
+    border-bottom: 1px solid rgba(127, 27, 29);
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.navbar .nav-item .btn{
+    color: #FFF;
+    font-family: 'GT-Sectra-Fine-Medium',serif;
+    background-color: rgba(127, 27, 29);
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.nav-link.btn.btn-primary:hover, #search-form button:hover, .list-group-item a:hover,  #form-box button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color: rgba(127,27,29,0.75);
+}
+
+#navbarNav {
+    flex-grow: 0;   /* Permite que os icones sociais fiquem no centro */
+}
+
+#img_banner {
+    min-height: 500px;
+    background-image: url("../img/bannerHunt.jpg");
+    background-repeat: no-repeat;                       /*Não deixa repetir a imagem*/
+    background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
+    background-position: center;                        /*Pega a base de baixo para preencher o espaço*/
+    position: relative;                                 /*O viewport posiciona no canto superior esquerdo*/
+}
+
+h1 {
+    font-family: 'GT-Sectra-Fine-Medium',serif;
+    color: rgba(127, 27, 29);
+    font-weight: bold;
+    position: absolute;
+    
+
+    /* Centraliza o texto */
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+    /* Centraliza o texto */
+
+    bottom: 0;
+    text-align: center;
+    font-size: 4em;
+    line-height: 0.6;
+}
+
+h2 {
+    font-family: 'GT-Sectra-Fine-Medium',serif;
+    color: rgba(127, 27, 29);
+    font-weight: bold;
+    text-indent: 30px;
+    font-size: 2.3rem
+}
+
+h3 {
+    font-family: 'GT-Sectra-Fine-Medium',serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(127, 27, 29);
+    
+}
+
+.container {
+    margin-top: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.container img {
+    height: 155px;
+    float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 0px 0;
+}
+
+#img_left {
+    float: right;
+    margin: 0px 0px 0px 10px;
+}
+
+.container p {
+    text-align: justify;
+    margin: auto 30px;
+    margin-top: 5px;
+    text-indent: 30px
+}
+
+.list-group-item{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+#discordInviteBox {
+    display: flex;
+    justify-content: center;
+    background-color: initial;
+}
+#discordInvite{
+    background: rgba(47,49,54,1);
+}
+
+#player-twitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------- footer / rodapé ------------- */
+
+footer {
+    background-color: #d6d6d6;
+    color: rgba(127, 27, 29);
+    font-size: 1.0em;
+}
+
+footer p {
+    line-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 0rem;
+    padding-left: 40px;
+}
