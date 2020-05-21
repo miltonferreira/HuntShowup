@@ -80,22 +80,56 @@
                         <div id="twitch-embed"></div>
                     </div>
                 </li>
+                <li class="list-group-item">
+                    <h3>Nossa rede de Streamers de Hunt Showdown</h3>
+                    <section class="wrap">
+                        <div class="item">
+                            <a href="https://www.twitch.tv/fezin_yo" target="_blank" class="hide">
+                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/790873c996c3c8ff-profile_image-70x70.jpeg" alt="">
+                                <h4>Fezin_yo</h4>
+                                <p>
+                                    Meu nome é Felipe, mas pode me chamar de FeziN, ou Fe, ou Lindo :D kk. Atualmente resido em Bertioga!
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.twitch.tv/fox3dfx" target="_blank" class="hide">
+                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/de031e70-420a-4184-a7ff-75b970b64fa5-profile_image-70x70.png" alt="">
+                                <h4>Fox3dfx</h4>
+                                <p>
+                                    Vivo em Roraima, jogo geralmente com 250 de ping no hunt e por isso geralmente os tiros saem tortos!
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.twitch.tv/sccrapy" target="_blank" class="hide">
+                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/7cb1d04e-b6a8-4df1-858e-9117c631bbe8-profile_image-70x70.png" alt="">
+                                
+                                <h4>Sccrapy</h4>
+                                <p>
+                                    Jogo games desde criança por incentivo do meu pai, quem também é gamer. Curto Mmorpg e FPS.
+                                </p>
+                            </a>
+                        </div>
+                    </section>
+                </li>
             </ul>
         </div>
         
 
-            <!-- Load the Twitch embed script -->
-            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-            <!--
-            Create a Twitch.Embed object that will render
-            within the "twitch-embed" root element.
-            -->
-            <script type="text/javascript">
+        <!--
+        Create a Twitch.Embed object that will render
+        within the "twitch-embed" root element.
+        -->
+
+        <script type="text/javascript">
             var embed = new Twitch.Embed("twitch-embed", {
                 width: 600,
                 height: 400,
-                channel: "lenzer0",
+                channel: "fox3dfx",
                 layout: "video",
                 autoplay: false,
                 // only needed if your site is also embedded on embed.example.com and othersite.example.com 
@@ -106,18 +140,20 @@
                 var player = embed.getPlayer();
                 player.pause();
             });
-            </script>
-            <script src="assets/js/discordInvite.js"></script>
+        </script>
+
+        <script src="assets/js/discordInvite.js"></script>
             <script>
               discordInvite.init({
               inviteCode: 'sRtaCch',
               title: 'Hunt Community SA',
             });
             discordInvite.render();
-            </script>
+        </script>
     </main>
     <footer>
         <p>Todos os direitos reservados - 2020</p>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

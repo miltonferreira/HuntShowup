@@ -22,7 +22,7 @@ body {
     height: 200vh;
 }
 
-/* nav */
+/* ---------- nav ------------- */
 .navbar{
     border-bottom: 1px solid rgba(127, 27, 29);
     background-color: rgba(0, 0, 0, 0.8) !important;
@@ -139,6 +139,85 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* -------------- Flexbox -------------- */
+
+
+.wrap {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 15px;
+}
+
+
+/* Flex Container */
+
+/* Flex Item */
+.item {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+	flex: 1;
+	margin: 5px;
+	background-color: rgb(156, 101, 235);
+	text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .6);
+    position: relative; /* relativo ao seu espaço */
+}
+
+.item p {
+    text-indent: 0px;
+    margin-right: 10px;
+    margin-left: 135px;
+    text-align: center;
+    color: #eadefb;
+    margin-bottom: 10px;
+}
+
+.item a {
+    color: #75328d;
+}
+
+.item img {
+    height: 130px;
+    border-radius: 50%;
+    margin: 0;
+    margin-top: 20px;
+    
+}
+
+.wrap a:hover {
+    text-decoration: none;
+    color: #75328d;
+}
+
+.hide:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient( to bottom,rgba(137, 43, 226, 0.5) 30%,rgba(117, 36, 192,1) 100% );
+    transition: opacity 0.3s linear;
+}
+
+.show:before {
+    content: ' Acesse a Twitch ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgb(169, 112, 252);
+    background-image: url('https://www.huntshowdown.com/assets/img/socom/twitch-red.png');
+
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: opacity 0.3s linear;
 }
 
 /* ------------- footer / rodapé ------------- */
