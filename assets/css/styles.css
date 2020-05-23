@@ -42,7 +42,7 @@ body {
 }
 
 .nav-link.btn.btn-primary:hover, #search-form button:hover, .list-group-item a:hover,  #form-box button:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
     color: rgb(255, 255, 255);
     border-color: rgba(127,27,29,0.75);
 }
@@ -58,6 +58,12 @@ body {
     background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
     background-position: center;                        /*Pega a base de baixo para preencher o espaço*/
     position: relative;                                 /*O viewport posiciona no canto superior esquerdo*/
+}
+
+#twitch-embed {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
 }
 
 h1 {
@@ -141,7 +147,58 @@ h3 {
     justify-content: center;
 }
 
-/* -------------- Flexbox -------------- */
+/* ------------- Noticias ------------- */
+
+.news-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.news {
+    max-width: 226px;
+    /* width: 60vw;
+    list-style: none; */
+    margin: 0 1em;
+    display: flex;
+    
+}
+
+.news a {
+    text-decoration: none;
+    color: black;
+}
+
+.news-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.news img {
+
+    margin: 0px;
+    width: auto;
+    height: auto;
+    float: none;
+
+}
+
+h6 {
+    font-size: 0.8rem;
+    float: right;
+    padding-right: 10px;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-top: 2px solid #b9bbbe;
+}
+
+/* ------------- Flex Container dos streamers da twitch ------------- */
 
 
 .wrap {
@@ -149,9 +206,6 @@ h3 {
     display: flex;
     margin-top: 15px;
 }
-
-
-/* Flex Container */
 
 /* Flex Item */
 .item {

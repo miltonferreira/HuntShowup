@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo1.png" type="image/x-icon">
     <title>Hunt Community SA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/discordInvite.css"/>
@@ -31,12 +32,49 @@
         </nav>
     </header>
     <div id="img_banner">
+        <div id="twitch-embed"></div>
         <h1>Hunt Community SA</h1>
     </div>
 
     <main>
         <div class="container">
             <ul class="list-group">
+                <li class="list-group-item">
+                    <h2>Últimas Notícias</h2>
+                    <section class="news-container">
+                        <div class="news">
+                            <a href="https://hcode.com.br/blog/entendendo-arrow-functions-de-uma-vez-por-todas" target="_blank">
+                                <picture>
+                                    <img src="https://storage.googleapis.com/hcode.com.br/blog/posts/121/cover_thumb.webp" alt="Capa do post Entendendo Arrow Functions de uma vez por todas">
+                                    <h4 class="news-title">Entendendo Arrow Functions de uma vez por todas</h4>
+                                </picture>
+                                <hr>
+                                <h6>23/05/2020</h6>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="https://hcode.com.br/blog/entendendo-arrow-functions-de-uma-vez-por-todas" target="_blank">
+                                <picture>
+                                    <img src="https://storage.googleapis.com/hcode.com.br/blog/posts/121/cover_thumb.webp" alt="Capa do post Entendendo Arrow Functions de uma vez por todas">
+                                    <h4 class="news-title">Entendendo Arrow Functions de uma vez por todas</h4>
+                                </picture>
+                                <hr>
+                                <h6>23/05/2020</h6>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="https://hcode.com.br/blog/entendendo-arrow-functions-de-uma-vez-por-todas" target="_blank">
+                                <picture>
+                                    <img src="https://storage.googleapis.com/hcode.com.br/blog/posts/121/cover_thumb.webp" alt="Capa do post Entendendo Arrow Functions de uma vez por todas">
+                                    <h4 class="news-title">Entendendo Arrow Functions de uma vez por todas</h4>
+                                </picture>
+                                <hr>
+                                <h6>23/05/2020</h6>
+                            </a>
+                        </div>
+                        
+                    </section>
+                </li>
                 <li class="list-group-item">
                     
                     <h2>Quem somos</h2>
@@ -72,14 +110,14 @@
                         de um battle-royale casual do mercado.
                     </p>
                 </li>
-                <li class="list-group-item">
+                <!-- <li class="list-group-item">
                     <h3>Streamer Transmitindo Hunt nesse momento</h3>
                         <div id="player-twitch" class="container">
                 
-                        <!-- Add a placeholder for the Twitch embed -->
+                        Add a placeholder for the Twitch embed
                         <div id="twitch-embed"></div>
                     </div>
-                </li>
+                </li> -->
                 <li class="list-group-item">
                     <h3>Nossa rede de Streamers de Hunt Showdown</h3>
                     <section class="wrap">
@@ -127,8 +165,8 @@
 
         <script type="text/javascript">
             var embed = new Twitch.Embed("twitch-embed", {
-                width: 600,
-                height: 400,
+                width: 440,
+                height: 340,
                 channel: "fox3dfx",
                 layout: "video",
                 autoplay: false,
