@@ -20,7 +20,7 @@ function connectFirebase() {
 
 function renderPage(){
 
-    document.querySelector('title').innerHTML = `${twitch[0].streamer}`;
+    // document.querySelector('title').innerHTML = `${twitch[0].streamer}`;
 
     streamer = twitch[0].streamer;
 
@@ -31,7 +31,7 @@ function renderPage(){
         height: 340,
         channel: twitch[0].streamer,
         layout: "video",
-        autoplay: false,
+        autoplay: true,
         // only needed if your site is also embedded on embed.example.com and othersite.example.com 
         parent: ["embed.example.com", "othersite.example.com"]
     });
