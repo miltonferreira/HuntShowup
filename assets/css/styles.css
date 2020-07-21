@@ -53,7 +53,7 @@ body {
 }
 
 #img_banner {
-    min-height: 500px;
+    min-height: 430px;
     background-image: url("../img/bannerHunt.jpg");
     background-repeat: no-repeat;                       /*Não deixa repetir a imagem*/
     background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
@@ -181,10 +181,19 @@ h3 {
 
     margin: 0px;
     width: auto;
-    height: auto;
     float: none;
 
+    /* Centraliza a imagem */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Centraliza a imagem */
+
 }
+
+/* picture img{
+    max-height: 150px;
+} */
 
 h6 {
     font-size: 0.8rem;

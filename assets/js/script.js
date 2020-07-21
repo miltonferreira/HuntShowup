@@ -1,6 +1,8 @@
 
 let twitch = [];
 
+let news = [];
+
 function connectFirebase() {
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -18,13 +20,9 @@ function connectFirebase() {
     firebase.analytics();
 }
 
-function renderPage(){
-
-    // document.querySelector('title').innerHTML = `${twitch[0].streamer}`;
+function renderTwitch(){
 
     streamer = twitch[0].streamer;
-
-    // var streamer = "fox3dfx";
 
     var embed = new Twitch.Embed("twitch-embed", {
         width: 440,
@@ -40,6 +38,8 @@ function renderPage(){
         var player = embed.getPlayer();
         player.pause();
     });
+
+    
 
 }
 
@@ -74,14 +74,23 @@ function readFiles(){
 
         snapshot.forEach(snapshotItem => {
 
-            let key = snapshotItem.key;         //key é o nome da lista nesse caso noticias
+            let key = snapshotItem.key;         //key é o nome da lista
             let data = snapshotItem.val();
 
-            data.forEach(item => {
-                twitch.push(item);              // add a data no JSON
-            });
+            if(key == "twitch"){
+                data.forEach(item => {
+                    twitch.push(item);              // add a data no JSON
+                });
+            }
 
-            console.log(key, data);
+            if(key == "news"){
+                data.forEach(item => {
+                    news.push(item);              // add a data no JSON
+                });
+            }
+            
+
+            // console.log(key, data);
             
             // se o arquivo tem o type mostra o arquivo para o usuario
             // if(data.type){
@@ -89,12 +98,57 @@ function readFiles(){
             // }
 
         })
+
+        // console.log(news);
         
-        renderPage();       //chama novamente função atualizada com o novo valor
+        renderNews();       //chama novamente função atualizada com o novo valor
+        renderTwitch();       //chama novamente função atualizada com o novo valor
         
+    });
+
+}
+
+function renderNews() {
+    
+    // document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
+
+    news.forEach(task => {
+
+        let li = document.createElement('div');
+        li.className = "news";
+
+        li.innerHTML = `
+                
+                    <a href="news.html" target="_blank">
+                        <picture>
+                            <img src="${task.foto}" alt="">
+                            <h4 class="news-title">${task.titulo}</h4>
+                        </picture>
+                            <hr>
+                            <h6>${this.convertToDate(task.timestamp)}</h6>
+                    </a>
+                
+            `;
+
+
+        li.querySelector('a').addEventListener('click', e => {
+            dataNews = task;
+            localStorage.setItem("news", JSON.stringify(task)); // converte para string
+        });
+
+        document.querySelector('.news-container').append(li);
 
     });
 
+}
+
+function convertToDate(time){
+
+    data = new Date(time * 1000);   // converte para milliseconds, somente -> new Date() <- pega a data do PC
+    date = `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+    hours = `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+
+    return date + " - " + hours;
 }
 
 connectFirebase();  //
