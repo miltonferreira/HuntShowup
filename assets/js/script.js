@@ -29,14 +29,15 @@ function renderTwitch(){
         height: 340,
         channel: twitch[0].streamer,
         layout: "video",
-        autoplay: true,
+        autoplay: false,
         // only needed if your site is also embedded on embed.example.com and othersite.example.com 
         parent: ["embed.example.com", "othersite.example.com"]
     });
 
     embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
         var player = embed.getPlayer();
-        player.pause();
+        player.play();
+        player.setVolume(0.0);
     });
 
     
