@@ -22,10 +22,12 @@ function connectFirebase() {
 
 function renderTwitch(){
 
+    document.querySelector('#twitch-embed').innerHTML = ``; // limpa a div para não agrupa com algo que já exista
+
     streamer = twitch[0].streamer;
 
     var embed = new Twitch.Embed("twitch-embed", {
-        width: 440,
+        width: 540,
         height: 340,
         channel: twitch[0].streamer,
         layout: "video",
@@ -111,7 +113,16 @@ function readFiles(){
 
 function renderNews() {
     
-    // document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
+    document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
+
+    console.log(news.length);
+
+
+    if(news.length > 3){    // evita que tenha mais que 3 noticias no feed
+        news.splice(3);     // remove o quarto item a diante, limitando a 3 itens no array
+    }
+
+    console.log(news.length);
 
     news.forEach(task => {
 

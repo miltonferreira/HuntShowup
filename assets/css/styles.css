@@ -20,6 +20,8 @@
 
 body {
     height: 200vh;
+    background: #0c1013;
+    color: #6c757d;
 }
 
 /* ---------- nav ------------- */
@@ -131,7 +133,8 @@ h3 {
 
 .list-group-item{
     border: none;
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    background-color: #192126;  /* cor de fundo do conteudo da página */
 }
 #discordInviteBox {
     display: flex;
@@ -168,7 +171,7 @@ h3 {
 
 .news a {
     text-decoration: none;
-    color: black;
+    color: #6c757d;
 }
 
 .news-title {
