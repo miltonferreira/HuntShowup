@@ -20,6 +20,53 @@ function connectFirebase() {
     firebase.analytics();
 }
 
+// rota para carregar e salvar arquivos
+function getFirebaseRef(path){
+
+    return firebase.database().ref(path);
+}
+
+// ler o JSON de arquivos no firebase realtime database
+function readFiles(){
+
+    this.getFirebaseRef().on('value', snapshot => {
+
+        snapshot.forEach(snapshotItem => {
+
+            let key = snapshotItem.key;         //key é o nome da lista
+            let data = snapshotItem.val();
+
+            if(key == "twitch"){
+                data.forEach(item => {
+                    twitch.push(item);              // add a data no JSON
+                });
+            }
+
+            if(key == "news"){
+                data.forEach(item => {
+                    news.push(item);              // add a data no JSON
+                });
+            }
+            
+
+            // console.log(key, data);
+            
+            // se o arquivo tem o type mostra o arquivo para o usuario
+            // if(data.type){
+            //     this.listFilesEl.appendChild(this.getFileView(data, key));
+            // }
+
+        })
+
+        console.log(news);
+        
+        renderNews();       //chama novamente função atualizada com o novo valor
+        renderTwitch();       //chama novamente função atualizada com o novo valor
+        
+    });
+
+}
+
 function renderTwitch(){
 
     document.querySelector('#twitch-embed').innerHTML = ``; // limpa a div para não agrupa com algo que já exista
@@ -62,62 +109,14 @@ for(let q of graphElem){
 
 }
 
-// rota para carregar e salvar arquivos
-function getFirebaseRef(path){
-
-    return firebase.database().ref(path);
-}
-
-// ler o JSON de arquivos no firebase realtime database
-function readFiles(){
-
-    this.getFirebaseRef().on('value', snapshot => {
-
-        // this.listFilesEl.innerHTML = '';    // limpa caso tenha alguma info na tela
-
-        snapshot.forEach(snapshotItem => {
-
-            let key = snapshotItem.key;         //key é o nome da lista
-            let data = snapshotItem.val();
-
-            if(key == "twitch"){
-                data.forEach(item => {
-                    twitch.push(item);              // add a data no JSON
-                });
-            }
-
-            if(key == "news"){
-                data.forEach(item => {
-                    news.push(item);              // add a data no JSON
-                });
-            }
-            
-
-            // console.log(key, data);
-            
-            // se o arquivo tem o type mostra o arquivo para o usuario
-            // if(data.type){
-            //     this.listFilesEl.appendChild(this.getFileView(data, key));
-            // }
-
-        })
-
-        // console.log(news);
-        
-        renderNews();       //chama novamente função atualizada com o novo valor
-        renderTwitch();       //chama novamente função atualizada com o novo valor
-        
-    });
-
-}
-
 function renderNews() {
     
     document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
 
     console.log(news.length);
 
-
+    news.reverse();         // inverte as posições do array
+    
     if(news.length > 3){    // evita que tenha mais que 3 noticias no feed
         news.splice(3);     // remove o quarto item a diante, limitando a 3 itens no array
     }
@@ -126,12 +125,13 @@ function renderNews() {
 
     news.forEach(task => {
 
+
         let li = document.createElement('div');
         li.className = "news";
 
         li.innerHTML = `
                 
-                    <a href="news.html" target="_blank">
+                    <a href="news/news-${task.id}.html" target="_blank">
                         <picture>
                             <img src="${task.foto}" alt="">
                             <h4 class="news-title">${task.titulo}</h4>
@@ -163,7 +163,7 @@ function convertToDate(time){
     return date + " - " + hours;
 }
 
-connectFirebase();  //
+connectFirebase();  // credenciais para conectar ao firebase
 readFiles();
 
 

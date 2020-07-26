@@ -47,19 +47,3 @@
 #navbarNav {
     flex-grow: 0;   /* Permite que os icones sociais fiquem no centro */
 }
-
-#img_banner {
-    min-height: 500px;
-    background-image: url("../img/bannerHunt.jpg");
-    background-repeat: no-repeat;                       /*Não deixa repetir a imagem*/
-    background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
-    background-position: center;                        /*Pega a base de baixo para preencher o espaço*/
-    position: relative;                                 /*O viewport posiciona no canto superior esquerdo*/
-}
-
-#twitch-embed {
-    display: flex;
-    justify-content: center;
-    padding-top: 80px;
-}
-
