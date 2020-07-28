@@ -3,6 +3,9 @@ let twitch = [];
 
 let news = [];
 
+let streamers = [];
+let resetStreamers = 0; // caso atualiza o "streamers" esse let serve para limpa o array
+
 function connectFirebase() {
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -47,7 +50,18 @@ function readFiles(){
                     news.push(item);              // add a data no JSON
                 });
             }
-            
+
+            if(key == "streamers"){
+
+                if(resetStreamers == 1){
+                    streamers = [];
+                }
+
+                data.forEach(item => {
+                    streamers.push(item);              // add a data no JSON
+                });
+
+            }
 
             // console.log(key, data);
             
@@ -58,10 +72,15 @@ function readFiles(){
 
         })
 
+        resetStreamers = 1;     // indica que o array streamers já tem infos
+
+        console.log(streamers);
         console.log(news);
         
-        renderNews();       //chama novamente função atualizada com o novo valor
-        renderTwitch();       //chama novamente função atualizada com o novo valor
+        renderTwitch();         // chama novamente função atualizada com o novo valor
+        renderNews();           // chama novamente função atualizada com o novo valor
+        renderStreamers();      // chama novamente função atualizada da lista de streamers
+        showIconTwitch();       // ao passar o mouse do card do streamer mostra o logo do twitch
         
     });
 
@@ -93,19 +112,24 @@ function renderTwitch(){
 
 }
 
-// let z = getComputedStyle(document.querySelector('.wrap a'), ':before');
+// ao passar o mouse sobre o card do streamer, mostra o logo do twitch para clicar e ir ao canal
+function showIconTwitch(){
 
-var graphElem = document.querySelectorAll('.wrap a');
+    // let z = getComputedStyle(document.querySelector('.wrap a'), ':before');
 
-for(let q of graphElem){
+    var graphElem = document.querySelectorAll('.wrap a');
 
-    q.addEventListener('mouseover', function (event) {
-        q.setAttribute('class', 'show');
-    });
-    
-    q.addEventListener('mouseleave', function (event) {
-        q.setAttribute('class', 'hide');
-    });
+    for(let q of graphElem){
+
+        q.addEventListener('mouseover', function (event) {
+            q.setAttribute('class', 'show');
+        });
+        
+        q.addEventListener('mouseleave', function (event) {
+            q.setAttribute('class', 'hide');
+        });
+
+    }
 
 }
 
@@ -113,7 +137,7 @@ function renderNews() {
     
     document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
 
-    console.log(news.length);
+    // console.log(news.length);
 
     news.reverse();         // inverte as posições do array
     
@@ -121,7 +145,7 @@ function renderNews() {
         news.splice(3);     // remove o quarto item a diante, limitando a 3 itens no array
     }
 
-    console.log(news.length);
+    // console.log(news.length);
 
     news.forEach(task => {
 
@@ -149,6 +173,45 @@ function renderNews() {
         });
 
         document.querySelector('.news-container').append(li);
+
+    });
+
+}
+
+function renderStreamers() {
+    
+    document.querySelector('.wrap').innerHTML = ''; // limpa a lista para não repetir quando add nova tarefa
+
+    // if(streamers.length > 3){
+    //     streamers.reverse();
+    //     streamers.splice(3);
+        
+    // }
+
+    streamers.forEach(task => {
+
+        let li = document.createElement('div');
+        li.className = "item flex-item-1";
+
+        li.innerHTML = `
+                
+                    <a href="${task.canal}" target="_blank" class="hide">
+                        <img src="${task.foto}" alt="foto">
+                        <h4>${task.nome}</h4>
+                        <p>
+                            ${task.texto}
+                        </p>
+                    </a>
+                
+            `;
+
+
+        // li.querySelector('a').addEventListener('click', e => {
+        //     dataNews = task;
+        //     localStorage.setItem("news", JSON.stringify(task)); // converte para string
+        // });
+
+        document.querySelector('.wrap').append(li);
 
     });
 

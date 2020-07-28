@@ -60,6 +60,12 @@ h3 {
     
 }
 
+h4 {
+    padding-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 .container {
     margin-top: 20px;
     padding-right: 60px;
@@ -90,6 +96,7 @@ h3 {
     border: none;
     /* background-color: rgba(0, 0, 0, 0.05); */
     background-color: #192126;  /* cor de fundo do conteudo da página */
+    padding: 0;
 }
 #discordInviteBox {
     display: flex;
@@ -168,30 +175,35 @@ hr {
 
 /* ------------- Flex Container dos streamers da twitch ------------- */
 
+.flex {
+    display: flex;
+    
+}
+
+.flex-item-1 {
+	flex: 1;    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+}
 
 .wrap {
     flex-wrap: wrap;
-    display: flex;
     margin-top: 15px;
 }
 
 /* Flex Item */
 .item {
-	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
-	flex: 1;
 	margin: 5px;
 	background-color: rgb(156, 101, 235);
 	text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .6);
     position: relative; /* relativo ao seu espaço */
 }
 
 .item p {
-    text-indent: 0px;
+    /* text-indent: 0px; */
     margin-right: 10px;
     margin-left: 135px;
-    text-align: center;
+    text-align: right;
     color: #eadefb;
     margin-bottom: 10px;
 }
@@ -201,10 +213,11 @@ hr {
 }
 
 .item img {
-    height: 130px;
+    height: 100px;
     border-radius: 50%;
     margin: 0;
     margin-top: 20px;
+    margin-left: 10px;
     
 }
 
@@ -255,4 +268,25 @@ footer p {
     margin-top: 15px;
     margin-bottom: 0rem;
     padding-left: 40px;
+}
+
+@media (max-width: 1199px) 
+{
+    h4 {
+        font-size: 0.8rem;  /* diminui o nome do streamer */
+    }
+}
+
+@media (max-width: 991px) 
+{
+    h4 {
+        font-size: 1rem;    /* aumenta o nome do streamer */
+    }
+}
+
+@media (max-width: 411px) 
+{
+    h4 {
+        font-size: 0.8rem;  /* diminui o nome do streamer */
+    }
 }
