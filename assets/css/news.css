@@ -2,6 +2,8 @@
 body {
     /* height: 200vh; */
     margin-top: 85px;
+    background: #0c1013;
+    color: #6c757d;
 }
 
 .container {
@@ -29,11 +31,12 @@ ul {
     position: relative;
     display: block;
     padding: .75rem 2.25rem;
+    background-color: #192126;
 }
 
 .list-group-item {
     border: none;
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
 }
 
 .list-group-item img {
@@ -57,8 +60,40 @@ h1{
     color: rgba(127, 27, 29);
 }
 
+h2{
+    color: rgba(127, 27, 29);
+}
+
 .new-date{
     font-weight: 600;
     text-decoration: underline;
     color: rgba(127, 27, 29);
+}
+
+@media (max-width: 1199px) 
+{
+    .list-group-item img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 991px) 
+{
+    .list-group-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) 
+{
+    .list-group-item img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 411px) 
+{
+    .list-group-item img {
+        height: 75px;
+    }
 }

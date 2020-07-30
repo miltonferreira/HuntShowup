@@ -255,21 +255,6 @@ hr {
     transition: opacity 0.3s linear;
 }
 
-/* ------------- footer / rodapé ------------- */
-
-footer {
-    background-color: #d6d6d6;
-    color: rgba(127, 27, 29);
-    font-size: 1.0em;
-}
-
-footer p {
-    line-height: 50px;
-    margin-top: 15px;
-    margin-bottom: 0rem;
-    padding-left: 40px;
-}
-
 @media (max-width: 1199px) 
 {
     h4 {

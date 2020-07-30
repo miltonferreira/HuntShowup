@@ -2,7 +2,6 @@
 
 // dataNews = JSON.parse(dataNews);    // converte para JSON
 
-let twitch = [];
 let news = [];
 
 function connectFirebase() {
@@ -37,13 +36,7 @@ function readFiles(){
 
             let key = snapshotItem.key;         //key é o nome da lista
             let data = snapshotItem.val();
-
-            if(key == "twitch"){
-                data.forEach(item => {
-                    twitch.push(item);              // add a data no JSON
-                });
-            }
-
+            
             if(key == "news"){
                 data.forEach(item => {
                     news.push(item);              // add a data no JSON
