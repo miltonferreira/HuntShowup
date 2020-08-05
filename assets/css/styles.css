@@ -187,6 +187,12 @@ h4 {
 
 }
 
+.bannerA{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* picture img{
     max-height: 150px;
 } */
