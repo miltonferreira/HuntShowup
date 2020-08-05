@@ -88,7 +88,8 @@ h4 {
 .container p {
     text-align: justify;
     margin: auto 30px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     text-indent: 30px
 }
 
@@ -112,6 +113,36 @@ h4 {
     align-items: center;
     justify-content: center;
 }
+
+/* --------- estilo foto avatar --------- */
+
+.avatar_discord {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar_discord img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    
+    padding: 3px;
+    margin: 10px 10px 0px 10px;
+}
+
+.nomeAvatar {
+    /* color: #747c81;
+    margin-top: 20px; */
+    text-align: center;
+}
+
+.infoAvatar a {
+    color: rgb(145 0 255);
+}
+
+/* --------- estilo foto avatar --------- */
 
 /* ------------- Noticias ------------- */
 

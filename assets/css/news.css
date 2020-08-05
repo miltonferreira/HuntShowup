@@ -6,10 +6,14 @@ body {
     color: #6c757d;
 }
 
+main {
+    display: flex;
+}
+
 .container {
     margin-top: 20px;
-    padding-right: 100px;
-    padding-left: 80px;
+    /* padding-right: 100px; */
+    /* padding-left: 80px; */
 }
 
 ul {
@@ -68,6 +72,11 @@ h2{
     font-weight: 600;
     text-decoration: underline;
     color: rgba(127, 27, 29);
+}
+
+.ads img{
+    margin-top: 20px;
+    padding-right: 15px;
 }
 
 @media (max-width: 1199px) 
