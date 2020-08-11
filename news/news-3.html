@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/logo1.png" type="image/x-icon">
+    <title>Noticia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/news.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footerbar.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html"><img id="logoHunt" src="../assets/img/logo1.png" alt="Logo Hunt Showdown"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="icons-social">
+                <a href="https://discord.gg/sRtaCch" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/discord-red.png" alt="logo discord"></a>
+                <a href="https://www.twitch.tv/directory/game/Hunt%3A%20Showdown" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/twitch-red.png" alt="logo twitch"></a>
+                <a href="https://www.instagram.com/huntthegame" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/instagram-red.png" alt="logo instagram"></a>
+                <a href="https://www.youtube.com/user/CrytekHunt" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/youtube-red.png" alt="logo youtube"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="https://store.steampowered.com/app/594650/Hunt_Showdown/" target="_blank">Comprar Game</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <input type="hidden" id="id_news" value="3"/>   <!-- indica pelo id qual é a noticia que deve aparecer -->
+
+            <ul>
+                <div class="list-group-item">
+                    <p class="new-date">11/08/2020 - 10:24</p>
+                    <img style="height: 300px;" src="https://steamcdn-a.akamaihd.net/steam/apps/1304601/header.jpg" alt="">
+                    <br>
+                    <h1>Double or Nothing DLC das pistolas e fim do spec no modo bounty</h1>
+                    <p>
+                        Disponível para adicionar ao seu jogo, o pacote Double or Nothing é a terceira e última adição ao Pacote Blood and Bones, acompanhando os pacotes Crossroads e The Revenant disponíveis anteriormente.<br><br>
+                        Um novo recurso do Spectate estava sendo testado e foi retirado para analise dos resultados. Durante o período de teste, os jogadores puderam assistir a outros jogadores em sua partida depois que seu próprio time foi completamente eliminado e eles não podem mais participar do jogo. A partir de hoje não é possível usar mais esse recurso.<br><br>
+                        <a href="https://store.steampowered.com/app/1304601/Hunt_Showdown__Double_or_Nothing/">Link para acessar DLC na steam</a>
+                    </p>
+
+                    
+                    
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/1304601/ss_1ad6f09e5dfebb6937dfde3995c5e5fad64b43cc.jpg" alt="">
+                    <br>
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/1304601/ss_05dbd385f0ca1c92a2cd861c6e19ac166910a7c9.jpg" alt="">
+                    <br>
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/1304601/ss_532626a9b51d20636c31c7cc5625025960453979.jpg" alt="">
+                    <br>
+                </div>
+            </ul>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+            
+        </div>
+        <div class="ads" style="display: none;">
+            <img src="../assets/img/ad.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados - 2020</p>
+    </footer>
+    <script src="../assets/js/news.js"></script>
+</body>
+</html>
