@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site sobre Hunt Showdown da Hunt Community SA">
+    <meta name="keywords" content="Hunt Showdown, Crytek, Discord, Community SA">
+    <link rel="shortcut icon" href="../assets/img/logo1.png" type="image/x-icon">
+    <title>Timeline do Hunt Showdown</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/news.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footerbar.css">
+    <link rel="stylesheet" href="../assets/css/timeline.css">
+    <meta property="og:title" content="Timeline do Hunt Showdown" />
+    <meta property="og:site_name" content="Hunt Showup"/>
+    <meta property="og:description" content="Timeline de acontecimentos importantes do game." />
+    <meta property="og:image" content="https://www.geeksunited.com.br/wp-content/uploads/2019/07/hunt-showdown-min.png" >
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html"><img id="logoHunt" src="../assets/img/Home-icon.png" alt="Logo Hunt Showdown"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="icons-social">
+                <a href="https://discord.gg/sRtaCch" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/discord-red.png" alt="logo discord"></a>
+                <a href="https://www.twitch.tv/directory/game/Hunt%3A%20Showdown" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/twitch-red.png" alt="logo twitch"></a>
+                <a href="https://www.instagram.com/huntthegame" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/instagram-red.png" alt="logo instagram"></a>
+                <a href="https://www.youtube.com/user/CrytekHunt" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/youtube-red.png" alt="logo youtube"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="https://store.steampowered.com/app/594650/Hunt_Showdown/" target="_blank">Comprar Game</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <input type="hidden" id="id_news" value="5"/>   <!-- indica pelo id qual é a noticia que deve aparecer -->
+
+            <ul>
+                <div class="list-group-item">
+                    <p class="new-date">26/08/2020 - 15:03</p>
+                    <h1>Timeline do Hunt Showdown</h1>                    
+                    <div id="timeline-content">
+                        
+                        <ul class="timeline">
+                          <li class="event" data-date="22/02/2018">
+                            <h3>Early Access para Steam</h3>
+                            <img src="https://www.geeksunited.com.br/wp-content/uploads/2019/07/hunt-showdown-min.png" alt="">
+                            <br>
+                            <p>Crytek disponibiliza de forma antecipada na steam para os jogadores interessados no game.</p>
+                          </li>
+                          <li class="event" data-date="15/11/2018">
+                            <h3>Novo Mapa Lawson Delta</h3>
+                            <img src="https://i.ytimg.com/vi/5TKQMhX83W4/maxresdefault.jpg" alt="">
+                            <br>
+                            <p>Logo após a gamescom de 2019, onde streamers testaram o novo mapa, todos poderam se aventurar em Lawson Delta.</p>    
+                          </li>
+                          <li class="event" id="date" data-date="02/04/2019">
+                            <h3>Novo Boss Assassin</h3>
+                            <img src="https://www.survival-sandbox.de/wp-content/uploads/2018/09/Hunt-Showdown-Assassin-800x450.jpg" alt="">
+                            <br>
+                            <p></p> <p>Terceiro Boss do game, o assassino trouxe as lâminas e insentos para assustar os jogadores.</p>    
+                          </li>
+                          
+                          <li class="event" data-date="27/08/2019">
+                            
+                            <h3>Lançamento 1.0 para Steam</h3>
+                            <img src="https://games.mxdwn.com/wp-content/uploads/2019/08/Hunt-1.0.jpg" alt="">
+                            <br>
+                            <p>O game é lançado oficialmente na steam!</p>
+                          </li>
+                        </ul>
+                      </div>
+
+                </div>
+            </ul>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+            
+        </div>
+        <div class="ads" style="display: none;">
+            <img src="../assets/img/ad.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados - 2020</p>
+    </footer>
+    <script src="../assets/js/news.js"></script>
+</body>
+</html>
