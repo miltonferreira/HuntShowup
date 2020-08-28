@@ -70,12 +70,12 @@ function showNews() {
                 <p class="new-date">${this.convertToDate(dataNews.timestamp)}</p>
                 <img src="${dataNews.foto}" alt="">
                 <h1>${dataNews.titulo}</h1>
-                <p>${dataNews.texto}</p>
+                
                     
             </div>
         `;
 
-
+            // <p>${dataNews.texto}</p>
 
     document.querySelector('.todo').append(li);
 
