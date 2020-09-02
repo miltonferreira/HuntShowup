@@ -68,6 +68,10 @@ h2{
     color: rgba(127, 27, 29);
 }
 
+b, strong {
+    font-weight: bold;
+}
+
 .new-date{
     font-weight: 600;
     text-decoration: underline;
