@@ -3,7 +3,8 @@ let twitch = [];
 
 let news = [];
 
-let streamers = [];
+let streamers = [];     // array que recebe os streamers no firebase
+
 let resetStreamers = 0; // caso atualiza o "streamers" esse let serve para limpa o array
 
 function connectFirebase() {
@@ -74,8 +75,8 @@ function readFiles(){
 
         resetStreamers = 1;     // indica que o array streamers já tem infos
 
-        console.log(streamers);
-        console.log(news);
+        // console.log(streamers);
+        // console.log(news);
         
         renderTwitch();         // chama novamente função atualizada com o novo valor
         renderNews();           // chama novamente função atualizada com o novo valor
@@ -85,6 +86,25 @@ function readFiles(){
     });
 
 }
+
+// embaralha as posições dos streamers
+function shuffle(array) {
+    var m = array.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+  
+    return array;
+  }
 
 function renderTwitch(){
 
@@ -187,6 +207,8 @@ function renderStreamers() {
     //     streamers.splice(3);
         
     // }
+
+    shuffle(streamers); // embaralha as posições dos streamers e retorna para o array
 
     streamers.forEach(task => {
 
