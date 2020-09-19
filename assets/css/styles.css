@@ -356,6 +356,17 @@ hr {
         font-size: 0.8rem;  /* diminui o nome do streamer */
     }
 
+    #icons-social a img{
+        height: 45px;
+    }
+
+}
+
+@media (max-width: 387px) 
+{
+    #icons-social a img{
+        height: 30px;
+    }
 }
 
 
