@@ -119,6 +119,11 @@ h4 {
 .avatar_discord {
     display: flex;
     justify-content: center;
+
+    /* empilha caso o tamanho da tela seja menor */
+    flex-wrap: wrap;        
+    margin-top: 15px;
+    /* empilha caso o tamanho da tela seja menor */
 }
 
 .avatar_discord img{
@@ -310,9 +315,47 @@ hr {
     }
 }
 
-@media (max-width: 411px) 
+@media (max-width: 475px) 
 {
+    h2 {
+        font-size: 1.8rem;  /* diminui o nome do streamer */
+        text-align: center;
+        text-indent: 0px;
+    }
+}
+
+@media (max-width: 428px) 
+{
+    .news-container img{
+        height: 136px;
+    }
+
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 412px) 
+{
+    .imgIndex img{
+        height: 136px;
+    }
+
+}
+
+@media (max-width: 408px) 
+{
+    h2 {
+        font-size: 1.8rem;  /* diminui o nome do streamer */
+        text-align: center;
+        text-indent: 0px;
+    }
+
     h4 {
         font-size: 0.8rem;  /* diminui o nome do streamer */
     }
+
 }
+
+
