@@ -47,3 +47,11 @@
 #navbarNav {
     flex-grow: 0;   /* Permite que os icones sociais fiquem no centro */
 }
+
+
+@media (max-width: 407px) 
+{
+    #logoHunt{
+        height: 40px;
+    }
+}
