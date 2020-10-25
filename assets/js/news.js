@@ -66,20 +66,38 @@ function showNews() {
 
     li.innerHTML = `
             
-            <div class="list-group-item">
-                <p class="new-date">${this.convertToDate(dataNews.timestamp)}</p>
-                <img src="${dataNews.foto}" alt="">
-                <h1>${dataNews.titulo}</h1>
-                
-                    
+    <div class="wrapper" style="background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;">
+        <div class="header">
+            <div class="date">
+                <span class="day">12</span>
+                <span class="month">Aug</span>
+                <span class="year">2016</span>
             </div>
-        `;
+        </div>
+        <div class="data">
+            <div class="content">
+                <h6 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h6>
+                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                <a href="#" class="button">Mame more</a>
+            </div>
+        </div>
+    </div>
 
-            // <p>${dataNews.texto}</p>
+    `;
+
+    // <div class="list-group-item">
+    // <p class="new-date">${this.convertToDate(dataNews.timestamp)}</p>
+    // <img src="${dataNews.foto}" alt="">
+    // <h1>${dataNews.titulo}</h1>
+    // </div>
+
+    // <p>${dataNews.texto}</p>
 
     document.querySelector('.todo').append(li);
 
 }
+
+
 
 function convertToDate(time){
 

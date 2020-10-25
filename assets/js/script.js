@@ -7,6 +7,8 @@ let streamers = [];     // array que recebe os streamers no firebase
 
 let resetStreamers = 0; // caso atualiza o "streamers" esse let serve para limpa o array
 
+let countNews = 0;          // let para pegar a terceira noticia
+
 function connectFirebase() {
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -137,16 +139,18 @@ function showIconTwitch(){
 
     // let z = getComputedStyle(document.querySelector('.wrap a'), ':before');
 
-    var graphElem = document.querySelectorAll('.wrap a');
+    var graphElem = document.querySelectorAll('.streamer_card a');
+
+    console.log("Ronaldo");
 
     for(let q of graphElem){
 
         q.addEventListener('mouseover', function (event) {
-            q.setAttribute('class', 'show');
+            q.setAttribute('class', 'show_card');
         });
         
         q.addEventListener('mouseleave', function (event) {
-            q.setAttribute('class', 'hide');
+            q.setAttribute('class', 'hide_card');
         });
 
     }
@@ -169,22 +173,61 @@ function renderNews() {
 
     news.forEach(task => {
 
+        countNews += 1;
 
         let li = document.createElement('div');
         li.className = "news";
 
-        li.innerHTML = `
-                
-                    <a href="news/news-${task.id}.html" target="_blank">
-                        <picture>
-                            <img src="${task.foto}" alt="">
-                            <h4 class="news-title">${task.titulo}</h4>
-                        </picture>
-                            <hr>
-                            <h6>${this.convertToDate(task.timestamp)}</h6>
-                    </a>
+        if(countNews < 3){
+            
+            li.innerHTML = `
+            
+                <div class="example-2 card_ col-md-4 project-box">
+                    <div id="id_news_">
+                        <a href="news/news-${task.id}.html" target="_blank">
+                            <div class="wrapper" style="background: url(${task.foto}) center/cover no-repeat;">
+                                <div class="header">
+                                    <div class="date">
+                                    <span class="day">${this.convertToDate(task.timestamp)}</span>
+                                    </div>
+                                </div>
+                                <div class="data">
+                                    <div class="content">
+                                    <h6 class="title">${task.titulo}</h6>
+                                    <p class="text">${task.texto}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 
             `;
+
+        } else {
+            li.innerHTML = `
+
+                <div class="example-2 card_ col-md-4 project-box hide-news">
+                    <div id="id_news_">
+                        <a href="news/news-${task.id}.html" target="_blank">
+                            <div class="wrapper" style="background: url(${task.foto}) center/cover no-repeat;">
+                                <div class="header">
+                                    <div class="date">
+                                    <span class="day">${this.convertToDate(task.timestamp)}</span>
+                                    </div>
+                                </div>
+                                <div class="data">
+                                    <div class="content">
+                                    <h6 class="title">${task.titulo}</h6>
+                                    <p class="text">${task.texto}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
 
 
         li.querySelector('a').addEventListener('click', e => {
@@ -198,9 +241,10 @@ function renderNews() {
 
 }
 
+// carrega os dados para os cards do streamers
 function renderStreamers() {
     
-    document.querySelector('.wrap').innerHTML = ''; // limpa a lista para não repetir quando add nova tarefa
+    //document.querySelector('.streamers_cards').innerHTML = ''; // limpa a lista para não repetir quando add nova tarefa
 
     // if(streamers.length > 3){
     //     streamers.reverse();
@@ -213,17 +257,25 @@ function renderStreamers() {
     streamers.forEach(task => {
 
         let li = document.createElement('div');
-        li.className = "item flex-item-1";
+        li.className = "card col-md-6 text-white streamers streamer_card";
 
         li.innerHTML = `
                 
-                    <a href="${task.canal}" target="_blank" class="hide">
-                        <img src="${task.foto}" alt="foto">
-                        <h4>${task.nome}</h4>
-                        <p>
-                            ${task.texto}
-                        </p>
+                
+                    <a href="${task.canal}" target="_blank" class="hide_card">
+                        <div class="card-header">${task.nome}</div>
+                        <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="${task.foto}" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <p class="card-text">${task.texto}</p>
+                            </div>
+                        </div>
+                        </div>
                     </a>
+                
                 
             `;
 
@@ -233,7 +285,7 @@ function renderStreamers() {
         //     localStorage.setItem("news", JSON.stringify(task)); // converte para string
         // });
 
-        document.querySelector('.wrap').append(li);
+        document.querySelector('#streamers-area .row').append(li);
 
     });
 

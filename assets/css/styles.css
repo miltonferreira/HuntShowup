@@ -1,54 +1,45 @@
+/* ----------------- Gerais ----------------- */
+
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    height: 200vh;
+    /* height: 200vh; */
     background: #0c1013;
-    color: #6c757d;
+    color: #fff;
 }
 
-#img_banner {
-    min-height: 430px;
-    background-image: url("../img/bannerHunt.jpg");
-    background-repeat: no-repeat;                       /*Não deixa repetir a imagem*/
-    background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
-    background-position: center;                        /*Pega a base de baixo para preencher o espaço*/
-    position: relative;                                 /*O viewport posiciona no canto superior esquerdo*/
+main {
+    margin-top: 75px;
 }
 
-#twitch-embed {
-    display: flex;
-    justify-content: center;
-    padding-top: 80px;
+.container {
+    /* width: 1000px; */
+    padding: 10px 40px 10px 40px;
+    background-color: #192126;  /* cor de fundo do conteudo da página */
+    /* margin-right: 150px;
+    margin-left: 150px; */
 }
 
-h1 {
-    font-family: 'GT-Sectra-Fine-Medium',serif;
-    color: rgba(127, 27, 29);
-    font-weight: bold;
-    position: absolute;
-    
-
-    /* Centraliza o texto */
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); 
-    /* Centraliza o texto */
-
-    bottom: 0;
-    text-align: center;
-    font-size: 4em;
-    line-height: 0.6;
+.container p {
+    text-align: justify;
+    text-indent: 30px;
+    padding: 30px 20px;
 }
 
 h2 {
     font-family: 'GT-Sectra-Fine-Medium',serif;
-    color: rgba(127, 27, 29);
+    color: rgb(195 32 35);
     font-weight: bold;
-    text-indent: 30px;
-    font-size: 2.3rem
+    /* text-indent: 30px; */    /* Faz um espaçamento */
+    font-size: 2.3rem;
+}
+
+.h2-custom{
+    text-align: center;
+    margin-bottom: 0;
 }
 
 h3 {
@@ -66,39 +57,174 @@ h4 {
     font-weight: bold;
 }
 
-.container {
-    margin-top: 20px;
-    padding-right: 60px;
-    padding-left: 60px;
+h5 {
+    font-family: 'GT-Sectra-Fine-Medium',serif;
+    color: rgba(127, 27, 29);
+    font-weight: bold;
+    text-indent: 30px;
+    font-size: 1.5rem;
+    text-align: right;
 }
 
-.container img {
-    height: 155px;
-    float: left;
-    border: transparent thin solid;
-    padding: 5px;
-    margin: 0px 10px 0px 0;
+.bg-text {
+    background-color: #141a1d99;   /* cor de fundo do conteudo da página */
 }
 
-#img_left {
-    float: right;
-    margin: 0px 0px 0px 10px;
+.my-1 {
+    border-top: 1px solid #7f1b1d;
+    margin-top: .0rem!important;
 }
 
-.container p {
-    text-align: justify;
-    margin: auto 30px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    text-indent: 30px
+.col-md-12 {
+    padding-bottom: 10px;
 }
 
-.list-group-item{
-    border: none;
-    /* background-color: rgba(0, 0, 0, 0.05); */
-    background-color: #192126;  /* cor de fundo do conteudo da página */
-    padding: 0;
+.center-content {   /* Centraliza o conteudo*/
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
+
+.negativo { /* tira as margens negativas do row */
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* ----------------- Stream Ao vivo ----------------- */
+
+#img_banner {
+    min-height: 340px;
+    background-image: url("../img/bannerHunt.jpg");
+    background-repeat: no-repeat;                       /*Não deixa repetir a imagem*/
+    background-size: cover;                             /*Faz a imagem ocupar todo o espaço*/
+    background-position: center;                        /*Pega a base de baixo para preencher o espaço*/
+    position: relative;                                 /*O viewport posiciona no canto superior esquerdo*/
+}
+
+#twitch-embed {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------- evento-area ----------------- */
+
+#evento-area .col-md-12 {
+    position: unset;
+}
+
+#evento-area {
+    position: relative;
+    background-color: black;
+    /* height: 75vh; */
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+#evento-area video {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    /* width: auto; */
+    height: 770px;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+#evento-area .container_evento {
+    /* display: none; */
+    position: absolute;
+    z-index: 2;
+}
+  
+  #evento-area .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+.display-3 {
+    padding-top: 30px;
+}
+
+  @media(max-width: 768px){
+    #evento-area {
+        display: none;
+      }
+  }
+  
+/* ----------------- news-area ----------------- */
+
+#game-area {
+    background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/05/hunt-showdown-sunset.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media(max-width: 767px){
+    .hide-news {
+        display: none;
+    }
+    .example-2 {
+        flex: none!important;
+        max-width: none!important;
+    }
+}
+
+/* ----------------- game-area ----------------- */
+
+
+@media(max-width: 992px){
+    #player {
+        width: 340px;
+        height: 240px;
+    }
+}
+
+@media(max-width: 767px){
+    #player {
+        width: 440px;
+        height: 260px;
+    
+    }
+}
+
+@media(max-width: 538px){
+    #player {
+        width: 343px;
+        height: 195px;
+    
+    }
+}
+
+@media(max-width: 538px){
+    #player {
+        width: 343px;
+        height: 195px;
+    
+    }
+}
+
+@media(max-width: 425px){
+    #player {
+        width: 239px;
+        height: 139px;
+    
+    }
+}
+
+/* ----------------- discord-area ----------------- */
+
 #discordInviteBox {
     display: flex;
     justify-content: center;
@@ -108,21 +234,51 @@ h4 {
     background: rgba(47,49,54,1);
 }
 
-#player-twitch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media(max-width: 767px){
+    #discord-area img {
+        /* height: 225px; */
+    }
 }
 
-/* --------- estilo foto avatar --------- */
+@media(max-width: 575px){
+    #discord-area img {
+        /* height: 300px; */
+    }
+}
+
+/* ----------------- aprender-area ----------------- */
+
+#aprender-area {
+    background-image: url("https://www.hu3br.com/wp-content/uploads/2018/05/hunt-showdown-update-1.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+@media(max-width: 767px){
+    #aprender-area img {
+        /* height: 225px; */
+    }
+}
+
+@media(max-width: 575px){
+    #aprender-area img {
+        /* height: 300px; */
+    }
+}
+
+/* ----------------- professor-area ----------------- */
+
+#professor-area p {
+    padding-bottom: 0;
+}
 
 .avatar_discord {
-    display: flex;
+    display: flex;              /* ???*/
     justify-content: center;
 
     /* empilha caso o tamanho da tela seja menor */
-    flex-wrap: wrap;        
-    margin-top: 15px;
+    /* flex-wrap: wrap;         */
+    /* margin-top: 15px; */
     /* empilha caso o tamanho da tela seja menor */
 }
 
@@ -138,8 +294,6 @@ h4 {
 }
 
 .nomeAvatar {
-    /* color: #747c81;
-    margin-top: 20px; */
     text-align: center;
 }
 
@@ -151,128 +305,112 @@ h4 {
     color: rgb(0, 210, 255);
 }
 
-/* --------- estilo foto avatar --------- */
-
-/* ------------- Noticias ------------- */
-
-.news-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
+@media(max-width: 768px){
+    .col-md-2 {
+        /* -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%; */
+        max-width: 26%;
+    }
 }
 
-.news {
-    max-width: 226px;
-    /* width: 60vw;
-    list-style: none; */
-    margin: 0 1em;
-    display: flex;
-    
+/* ----------------- twitch-area ----------------- */
+
+#twitch-area {
+    background-image: url("https://d1fs8ljxwyzba6.cloudfront.net/assets/article/2016/08/30/misscliks_feature_feature.jpg");
+    background-position: top;
+    background-size: cover;
 }
 
-.news a {
-    text-decoration: none;
-    color: #6c757d;
+@media(max-width: 767px){
+    #twitch-area img {
+        /* height: 258px; */
+    }
 }
 
-.news-title {
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
+@media(max-width: 575px){
+    #twitch-area img {
+        /* height: 300px; */
+    }
 }
 
-.news img {
+/* ----------------- streamers-area ----------------- */
 
-    margin: 0px;
-    width: auto;
-    float: none;
-
-    /* Centraliza a imagem */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* Centraliza a imagem */
-
+.streamers {
+    max-width: 305px;   /* Só funciona com max-width*/
+    margin: 5px;
+    background-color: rgb(156, 101, 235);
 }
 
-.bannerA{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.streamers p{
+    padding: 0;
 }
 
-/* picture img{
-    max-height: 150px;
-} */
-
-h6 {
-    font-size: 0.8rem;
-    float: right;
-    padding-right: 10px;
+.streamers img{
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-hr {
-    margin-top: 0rem;
-    margin-bottom: 0.5rem;
-    border: 0;
-    border-top: 2px solid #b9bbbe;
+.card-header {
+    padding: .5rem 1rem;
 }
+
+.card-body {
+    padding: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media(max-width: 1024px){
+    .streamers {
+        max-width: 280px;
+    }
+    .streamers p{
+        text-align: right;
+    }
+}
+
+@media(max-width: 768px){
+    .streamers {
+        max-width: 310px;
+    }
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media(max-width: 425px){
+    .streamers {
+        max-width: 440px;
+    }
+}
+
 
 /* ------------- Flex Container dos streamers da twitch ------------- */
 
-.flex {
-    display: flex;
-    
+.card-text {
+    text-align: center!important;
+    text-indent: 0!important;
 }
 
-.flex-item-1 {
-	flex: 1;    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+.streamer_card a {
+    color: white;
 }
 
-.wrap {
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-/* Flex Item */
-.item {
-	margin: 5px;
-	background-color: rgb(156, 101, 235);
-	text-align: center;
-    font-size: 1em;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .6);
-    position: relative; /* relativo ao seu espaço */
-}
-
-.item p {
-    /* text-indent: 0px; */
-    margin-right: 10px;
-    margin-left: 135px;
-    text-align: right;
-    color: #eadefb;
-    margin-bottom: 10px;
-}
-
-.item a {
-    color: #75328d;
-}
-
-.item img {
-    height: 100px;
-    border-radius: 50%;
-    margin: 0;
-    margin-top: 20px;
-    margin-left: 10px;
-    
-}
-
-.wrap a:hover {
+.streamer_card a:hover {
     text-decoration: none;
     color: #75328d;
 }
 
-.hide:before {
+.streamer_card:before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -283,8 +421,8 @@ hr {
     transition: opacity 0.3s linear;
 }
 
-.show:before {
-    content: ' Acesse a Twitch ';
+.show_card:before {
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -301,75 +439,29 @@ hr {
     transition: opacity 0.3s linear;
 }
 
-@media (max-width: 1199px) 
-{
-    h4 {
-        font-size: 0.8rem;  /* diminui o nome do streamer */
-    }
+/* ----------------- destaque-area ----------------- */
+#destaque-area {
+    margin-right: 15px;
 }
 
-@media (max-width: 991px) 
-{
-    h4 {
-        font-size: 1rem;    /* aumenta o nome do streamer */
-    }
-}
+/* Botao de subir para o topo*/
 
-@media (max-width: 475px) 
-{
-    h2 {
-        font-size: 1.8rem;  /* diminui o nome do streamer */
-        text-align: center;
-        text-indent: 0px;
-    }
-}
-
-@media (max-width: 428px) 
-{
-    .news-container img{
-        height: 136px;
-    }
-
-    .container {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    #icons-social a img{
-        height: 45px;
-    }
-}
-
-@media (max-width: 412px) 
-{
-    .imgIndex img{
-        height: 136px;
-    }
-
-    #icons-social a img{
-        height: 30px;
-    }
-
-}
-
-@media (max-width: 408px) 
-{
-    h2 {
-        font-size: 1.8rem;  /* diminui o nome do streamer */
-        text-align: center;
-        text-indent: 0px;
-    }
-
-    h4 {
-        font-size: 0.8rem;  /* diminui o nome do streamer */
-    }
-
-    #icons-social a img{
-        height: 25px;
-    }
-
-}
-
-
-
-
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(169, 112, 252); /* Add a dark-grey background on hover */
+  }

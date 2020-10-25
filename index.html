@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,44 +20,372 @@
 
     <link rel="shortcut icon" href="assets/img/logo1.png" type="image/x-icon">
     <title>Hunt Showup</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Outros Estilos -->
     <link rel="stylesheet" href="assets/css/discordInvite.css"/>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/news-card.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/footerbar.css">
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="js/progressbar.min.js"></script>
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!-- Youtube -->
+    <script src="assets/js/youtube.js"></script>
 
     <meta name="google-site-verification" content="IkuiIU_xB9O3l1m2yDrqatLPVki3FrrfoMzGKxpP30s" />
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img id="logoHunt" src="assets/img/Home-icon.png" alt="Logo Hunt Showdown"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="icons-social">
-                <a href="https://discord.gg/sRtaCch" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/discord-red.png" alt="logo discord"></a>
-                <a href="https://www.twitch.tv/directory/game/Hunt%3A%20Showdown" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/twitch-red.png" alt="logo twitch"></a>
-                <a href="https://www.instagram.com/huntthegame" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/instagram-red.png" alt="logo instagram"></a>
-                <a href="https://www.youtube.com/user/CrytekHunt" target="_blank"><img src="https://www.huntshowdown.com/assets/img/socom/youtube-red.png" alt="logo youtube"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary" href="https://store.steampowered.com/app/594650/Hunt_Showdown/" target="_blank">Comprar Game</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark"> <!-- navbar-dark mostra menu quando for tablet/mobile -->
+                <a href="#" class="navbar-brand">
+                <img id="logo" src="assets/img/logo1.png" alt="hDC Agency">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" 
+                    aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link" id="news-menu">Noticias</a>
+                        <a href="#" class="nav-item nav-link" id="game-menu">Game</a>
+                        <a href="#" class="nav-item nav-link" id="discord-menu">Discord</a>
+                        <a href="#" class="nav-item nav-link" id="aprender-menu">Aprender</a>
+                        <a href="#" class="nav-item nav-link" id="twitch-menu">Twitch</a>
+                        <!-- <a href="#" class="nav-item nav-link" id="contact-menu">Contato</a> -->
+                    </div>
+                    <button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
+                </div>
+            </nav>
+        </div>
     </header>
-    <div id="img_banner">
-        <div id="twitch-embed"></div>
-        <!-- <h1>Hunt Showup</h1> -->
-    </div>
-
     <main>
-        <div class="container">
-            <ul class="list-group">
+        <!-- Stream Ao vivo -->
+        <div id="img_banner" style="display: none;">
+            <div id="twitch-embed"></div>
+            <!-- <h1>Hunt Showup</h1> -->
+        </div>
+        <!-- Evento -->
+        <div id="evento-area" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="overlay"></div>
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                            <source src="https://firebasestorage.googleapis.com/v0/b/hunt-showup.appspot.com/o/videos%2FhuntHallow.mp4?alt=media&token=cb3500ad-c781-4bc0-bb71-bc66f64d7d95" type="video/mp4">
+                        </video>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="container_evento">
+                                    <img src="https://img2.pngio.com/halloween-pictures-to-colour-with-history-halloween-wishes-happy-halloween-signs-png-1978_1536.png" style="height:  350px;" alt="">
+                                    <div class="d-flex h-100 text-center align-items-center">
+                                    <div class="w-100 text-white">
+                                        <!-- <h3 class="display-3">Evento de Halloween</h3> -->
+                                        <!-- <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p> -->
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="container_evento">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/hunt-showup.appspot.com/o/evento_halloween%2Fbutcher_hallow.png?alt=media&token=04b46270-565b-4792-a75e-75711795ce3b" style="height:  890px;" alt="">
+                                    <div class="d-flex h-100 text-center align-items-center">
+                                    <div class="w-100 text-white">
+                                        <!-- <h3 class="display-3">Evento de Halloween</h3> -->
+                                        <!-- <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p> -->
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+        <!-- Noticias -->
+        <div id="news-area" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Últimas Notícias</h2>
+                </div>
+                <div class="col-md-12 news-container">
+                    
+                </div>
+                <div class="col-md-12" style="display: none;">
+                    <h5>Arquivo -></h5>
+                </div>
+            </div>
+        </div>
+        <div class="row negativo">
+            <div class="col-sm-12">
+                <!-- Game -->
+                <div id="game-area" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Sobre o Jogo</h2>
+                            <hr class="my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="bg-text">
+                                Hunt: Showdown é um jogo PvP de caça a recompensas em primeira pessoa com vários elementos PvE, 
+                                dos criadores de Crysis. Passado nos cantos mais sombrios do mundo, Hunt: Showdown transporta a 
+                                emoção dos jogos de sobrevivência para o formato competitivo.
+                            </p>  
+                        </div>
+                        <div class="col-md-6">
+                            <div id="player" class="center-content"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Discord -->
+                <div id="discord-area" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Quem somos</h2>
+                            <hr class="my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid center-content" src="https://assets.b9.com.br/wp-content/uploads/2018/10/discord-b9.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                Essa comunidade foi criada para unir os jogadores de Hunt Showdown da América do sul, todos aqueles que jogam ou acabaram 
+                                de conhecer o jogo são bem-vindos, todos serão acolhidos para desfrutar e se divertir na nossa comunidade. Buscamos com essa 
+                                iniciativa, uma comunicação direta com a crytek, passando o que achamos do jogo atual, o que precisa ser melhorado e o que vem 
+                                dando certo, conforme feedback dos jogadores da nossa comunidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- discord-link-area -->
+                <div id="discord-link-area" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="discordInviteBox"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Aprender -->
+                <div id="aprender-area" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Você é novo no game</h2>
+                            <hr class="my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="bg-text">
+                                Hunt é um jogo desafiador até para os mais experientes, caso você seja iniciante e queria conhecer melhor o game, ou está sentindo 
+                                dificuldades em jogar pois está achando tudo muito difícil, entre em nosso discord, temos pessoas dispostas em ajudar você dentro do 
+                                game, como temos jogadores que jogam desde a versão beta, eles conhecem muito sobre como jogar da melhor forma e querem trazer novos 
+                                jogadores que se interessam pelo hunt.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid center-content" src="https://preview.redd.it/3ja7cq1mm3b31.png?width=1920&format=png&auto=webp&s=5ebccf01364a159339d04d0a8289bbda24783451" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Professores -->
+                <div id="professor-area" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Jogadores que podem te ajudar</h2>
+                            <hr class="my-1">
+                        </div>
+                        <div class="col-md-12">
+                            <p>
+                                Clique em algum perfil abaixo para abrir a steam e adicione alguns, eles são 
+                                <b style="color: rgb(145 0 255);">"Os Mestres do Hunt"</b> e estão dispostos a ensinar como jogar melhor 
+                                o hunt showdown, além de dicas e formas de jogar para você melhor no jogo.
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/profiles/76561198151213359/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/218149392081747968/df807587d3f3c6baf2a1305ab918548e.png" alt="">
+                                    <h4 class="nomeAvatar">/AlmaNegra\</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/id/AAAAAAABC/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/115144648598618117/3ba179a78d3e718d48bb0fc3c5b15a66.png?size=256" alt="">
+                                    <h4 class="nomeAvatar">Käto</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/id/mendigx2/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/198612836371398656/7552fdbee3d1e39a4a8238d1716eae98.png" alt="">
+                                    <h4 class="nomeAvatar">Mendigx</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/profiles/76561198137618574/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/234366147494019072/321c93749409d18fdcc46ec1d490818a.png" alt="">
+                                    <h4 class="nomeAvatar">Nico Ψ</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/id/AAAAAAABC/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/245599039607930880/2c117d900a3e30cdd2f48b5546b9a678.png" alt="">
+                                    <h4 class="nomeAvatar">PorkSeller</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar avatar_discord">
+                                <a href="https://steamcommunity.com/id/Solifugae_/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/261612476192260096/ab8fc19b99a4bf3a41008413c1b0c01a.png" alt="">
+                                    <h4 class="nomeAvatar">Solifugae</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p>
+                                Esses são outros jogadores da comunidade, conhecidos como <b style="color: rgb(0, 210, 255);">"Graduados do Hunt"</b> e estão dispostos a jogar com novatos com pouca experiência no game.
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/LukasRTLK/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/392127685528256523/8b6f91bef8c61b9d5aeaf271a10b8dcd.png" alt="">
+                                    <h4 class="nomeAvatar">Luka (RssTT)</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/imragex/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/177359367916486656/06d6637f6f4dd0e3520e8d1221963b49.png" alt="">
+                                    <h4 class="nomeAvatar">imragex</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/yansilva98/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/230524896403390465/0120094424b3ed18759afa175316726f.png" alt="">
+                                    <h4 class="nomeAvatar">Yanzito</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/profiles/76561198143002868/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/258819948690931713/51ce659845100e85d23d7560bd736091.png?size=256" alt="">
+                                    <h4 class="nomeAvatar">𝕷𝖚𝖕𝖚𝖘 𝖙𝖍𝖊 𝖗𝖆𝖙</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/gabbafloresta/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/164140596166918144/6ef04fa5c1ed89a2ef0d538dc2a26318.png" alt="">
+                                    <h4 class="nomeAvatar">Billy 'The Faso' Kid</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/shenga22/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/405358298003537920/7a09859e706323eeb572c6c37db6e4d2.png" alt="">
+                                    <h4 class="nomeAvatar">Shenga</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="https://steamcommunity.com/id/mathoxx/" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/200082452746600448/17b1095bc4c4d64ff1f479d1c0fa6eb5.png" alt="">
+                                    <h4 class="nomeAvatar">Mathox</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="infoAvatar_ avatar_discord">
+                                <a href="http://steamcommunity.com/camilobicudo" target="_blank">
+                                    <img src="https://cdn.discordapp.com/avatars/237952590619475969/99d6d3dc6cf7aa806b2eca8fce4e2d4b.png" alt="">
+                                    <h4 class="nomeAvatar">Milo</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Twich -->
+                <div id="twitch-area" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Hunt Showdown na Twitch</h2>
+                            <hr class="my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid center-content" id="img_right" src="https://s2.glbimg.com/4mjvS5ramaSR9AGflvuGUf_PhBQ=/0x0:695x390/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/J/X/1RtkBsRm6HsngXbBxDBA/twitch-como-criar-emotes-canal-guia-1.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="bg-text">
+                                Também temos uma rede de streamers que jogam Hunt e estão empenhados em divulgar e fazer o game crescer em nossa região. Caso você 
+                                também seja um streamer e deseja entrar nessa rede entre em contato com a gente pelo discord. Estamos tentando junto a crytek, criar 
+                                parceria relativo ao jogo com streamers que gostam de jogá-lo em sua live, mostrando para mais pessoas que o hunt vai mais além 
+                                de um battle-royale casual do mercado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Streamers -->
+                <div id="streamers-area" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <h2 class="h2-custom">Streamers de hunt</h2>
+                            <hr class="my-1">
+                        </div>
+                        <!-- <div class="card col-md-6 text-white streamers streamer_card">
+                            <a href="https://www.twitch.tv/tche_barbaridade" target="_blank" class="hide_card">
+                                <div class="card-header">TCHE_BARBARIDADE</div>
+                                <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/38251073-e4ca-437e-a33b-66abd6e5574b-profile_image-300x300.png" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                    <p class="card-text">Meu nome e Lucas Trivilin, Conhecido como Tche Barbaridade. E rusho bem Lolo sem camisa!</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </a>
+                        </div> -->
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2" style="display: none;">
+                <!-- Destaque -->
+                <div class="row">
+                    <div id="destaque-area" class="container">
+                        
+                            <img class="img-fluid center-content" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/30897473/7c249bcb287a2df6d99f0316d078cbb2f2a6ab6d.png" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <ul class="list-group" style="display: none;">
+                
                 <li class="bannerA">
                     
                     <a href="https://miltonferreira.github.io/HuntShowup/news/news-1.html" style="display: none;">
@@ -77,188 +405,9 @@
                     </script>
 
                 </li>
-                <li class="list-group-item">
-                    <h2>Últimas Notícias</h2>
-                    <section class="news-container">
-                        
-                        
-                    </section>
-                </li>
-                <li class="list-group-item imgIndex">
-                    
-                    <h2>Quem somos</h2>
-                    <p>
-                        <img id="img_right" src="https://assets.b9.com.br/wp-content/uploads/2018/10/discord-b9.jpg" alt="">
-                        Essa comunidade foi criada para unir os jogadores de Hunt Showdown da América do sul, todos aqueles que jogam ou acabaram 
-                        de conhecer o jogo são bem-vindos, todos serão acolhidos para desfrutar e se divertir na nossa comunidade. Buscamos com essa 
-                        iniciativa, uma comunicação direta com a crytek, passando o que achamos do jogo atual, o que precisa ser melhorado e o que vem 
-                        dando certo, conforme feedback dos jogadores da nossa comunidade.
-                    </p>
-                </li>
-                <li class="list-group-item">
-                    <div id="discordInviteBox"></div>
-                </li>
-                <li class="list-group-item imgIndex">
-                    <h2 id="title-right">Você é novo no game</h2>
-                    <p>
-                        <img id="img_left" src="https://preview.redd.it/3ja7cq1mm3b31.png?width=1920&format=png&auto=webp&s=5ebccf01364a159339d04d0a8289bbda24783451" alt="">
-                        Hunt é um jogo desafiador até para os mais experientes, caso você seja iniciante e queria conhecer melhor o game, ou está sentindo 
-                        dificuldades em jogar pois está achando tudo muito difícil, entre em nosso discord, temos pessoas dispostas em ajudar você dentro do 
-                        game, como temos jogadores que jogam desde a versão beta, eles conhecem muito sobre como jogar da melhor forma e querem trazer novos 
-                        jogadores que se interessam pelo hunt.
-                    </p>
-                </li>
-                <li class="list-group-item">
-                    <h2 id="title-right">Jogadores que podem te ajudar</h2>
-                    <p>
-                        Clique em alguma foto desses jogadores para abrir o perfil da steam deles e adicione alguns, eles são <b style="color: rgb(145 0 255);">"Os Mestres do Hunt"</b> e estão dispostos a ensinar como jogar melhor o hunt showdown, além de dicas e formas de jogar para você melhor no jogo.
-                    </p>
-                    <div class="avatar_discord">
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/profiles/76561198151213359/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/218149392081747968/df807587d3f3c6baf2a1305ab918548e.png" alt="">
-                                <h4 class="nomeAvatar">/AlmaNegra\</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/id/AAAAAAABC/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/115144648598618117/73bf3b3e08fcf3f8046d14dda444878f.png?size=256" alt="">
-                                <h4 class="nomeAvatar">Käto</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/id/mendigx2/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/198612836371398656/7552fdbee3d1e39a4a8238d1716eae98.png" alt="">
-                                <h4 class="nomeAvatar">Mendigx</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/profiles/76561198137618574/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/234366147494019072/321c93749409d18fdcc46ec1d490818a.png" alt="">
-                                <h4 class="nomeAvatar">Nico Ψ</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/id/AAAAAAABC/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/245599039607930880/2c117d900a3e30cdd2f48b5546b9a678.png" alt="">
-                                <h4 class="nomeAvatar">PorkSeller</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar">
-                            <a href="https://steamcommunity.com/id/Solifugae_/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/261612476192260096/ab8fc19b99a4bf3a41008413c1b0c01a.png" alt="">
-                                <h4 class="nomeAvatar">Solifugae</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <p>
-                        Esses são outros jogadores da comunidade, conhecidos como <b style="color: rgb(0, 210, 255);">"Graduados do Hunt"</b> e estão dispostos a jogar com novatos com pouca experiência no game.
-                    </p>
-                    <div class="avatar_discord">
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/LukasRTLK/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/392127685528256523/8b6f91bef8c61b9d5aeaf271a10b8dcd.png" alt="">
-                                <h4 class="nomeAvatar">Luka (RssTT)</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/imragex/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/177359367916486656/06d6637f6f4dd0e3520e8d1221963b49.png" alt="">
-                                <h4 class="nomeAvatar">imragex</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/yansilva98/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/230524896403390465/0120094424b3ed18759afa175316726f.png" alt="">
-                                <h4 class="nomeAvatar">Yanzito</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/profiles/76561198143002868/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/258819948690931713/51ce659845100e85d23d7560bd736091.png?size=256" alt="">
-                                <h4 class="nomeAvatar">𝕷𝖚𝖕𝖚𝖘 𝖙𝖍𝖊 𝖗𝖆𝖙</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/gabbafloresta/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/164140596166918144/6ef04fa5c1ed89a2ef0d538dc2a26318.png" alt="">
-                                <h4 class="nomeAvatar">Billy 'The Faso' Kid</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/shenga22/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/405358298003537920/1fa2d31a2653caad23299a5ebcd6d20a.png" alt="">
-                                <h4 class="nomeAvatar">Shenga</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="https://steamcommunity.com/id/mathoxx/" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/200082452746600448/17b1095bc4c4d64ff1f479d1c0fa6eb5.png" alt="">
-                                <h4 class="nomeAvatar">Mathox</h4>
-                            </a>
-                        </div>
-                        <div class="infoAvatar_">
-                            <a href="http://steamcommunity.com/camilobicudo" target="_blank">
-                                <img src="https://cdn.discordapp.com/avatars/237952590619475969/99d6d3dc6cf7aa806b2eca8fce4e2d4b.png" alt="">
-                                <h4 class="nomeAvatar">Milo</h4>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item imgIndex">
-                    
-                    <h2>Hunt Showdown na Twitch</h2>
-                    <p>
-                        <img id="img_right" src="https://s2.glbimg.com/4mjvS5ramaSR9AGflvuGUf_PhBQ=/0x0:695x390/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/J/X/1RtkBsRm6HsngXbBxDBA/twitch-como-criar-emotes-canal-guia-1.jpg" alt="">
-                        Também temos uma rede de streamers que jogam Hunt e estão empenhados em divulgar e fazer o game crescer em nossa região. Caso você 
-                        também seja um streamer e deseja entrar nessa rede entre em contato com a gente pelo discord. Estamos tentando junto a crytek, criar 
-                        parceria relativo ao jogo com streamers que gostam de jogá-lo em sua live, mostrando para mais pessoas que o hunt vai mais além 
-                        de um battle-royale casual do mercado.
-                    </p>
-                </li>
-                <!-- <li class="list-group-item">
-                    <h3>Streamer Transmitindo Hunt nesse momento</h3>
-                        <div id="player-twitch" class="container">
                 
-                        Add a placeholder for the Twitch embed
-                        <div id="twitch-embed"></div>
-                    </div>
-                </li> -->
-                <li class="list-group-item">
-                    <h3>Streamers de hunt</h3>
-                    <section class="wrap flex">
-                        <div class="item">
-                            <a href="https://www.twitch.tv/fezin_yo" target="_blank" class="hide">
-                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/790873c996c3c8ff-profile_image-70x70.jpeg" alt="">
-                                <h4>Fezin_yo</h4>
-                                <p>
-                                    Meu nome é Felipe, mas pode me chamar de FeziN, ou Fe, ou Lindo :D kk. Atualmente resido em Bertioga!
-                                </p>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="https://www.twitch.tv/fox3dfx" target="_blank" class="hide">
-                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/de031e70-420a-4184-a7ff-75b970b64fa5-profile_image-70x70.png" alt="">
-                                <h4>Fox3dfx</h4>
-                                <p>
-                                    Vivo em Roraima, jogo geralmente com 250 de ping no hunt e por isso geralmente os tiros saem tortos!
-                                </p>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="https://www.twitch.tv/sccrapy" target="_blank" class="hide">
-                                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/7cb1d04e-b6a8-4df1-858e-9117c631bbe8-profile_image-70x70.png" alt="">
-                                
-                                <h4>Sccrapy</h4>
-                                <p>
-                                    Jogo games desde criança por incentivo do meu pai, quem também é gamer. Curto Mmorpg e FPS.
-                                </p>
-                            </a>
-                        </div>
-                    </section>
-                </li>
             </ul>
-        </div>
+        
         
 
         <!-- Load the Twitch embed script -->
@@ -275,7 +424,11 @@
         </script>
     </main>
     <footer>
-        <p>Todos os direitos reservados - 2020</p>
+        <div class="footer-area container-fluid">
+            <div class="row">
+                <p>Todos os direitos reservados - 2020</p>
+            </div>
+        </div>
     </footer>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
@@ -285,6 +438,7 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>

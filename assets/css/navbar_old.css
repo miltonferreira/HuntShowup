@@ -3,44 +3,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Barra de navegação */
-
-#nav-container {
-    margin-top: 0;
-}
-
-header, .navbar {
-    border-bottom: 1px solid rgba(127, 27, 29);
-    background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-#nav-container {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#logo {
-    height: 56px;
-}
-
-.navbar-brand {
-    padding: 0;
-    color: #FFF;
-}
-
-.navbar-brand:hover {
-    color: #FFF;
-}
-
-#navbar-links a {
-    color: #FFF;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding: 1rem .8rem;
-}
-
-/*
 #logoHunt{
     height: 50px;
     width: auto;
@@ -56,7 +18,7 @@ header, .navbar {
     padding: 0 5px;
 }
 
-/* ---------- nav ------------- 
+/* ---------- nav ------------- */
 
 .navbar{
     border-bottom: 1px solid rgba(127, 27, 29);
@@ -83,7 +45,7 @@ header, .navbar {
 }
 
 #navbarNav {
-    flex-grow: 0;   /* Permite que os icones sociais fiquem no centro 
+    flex-grow: 0;   /* Permite que os icones sociais fiquem no centro */
 }
 
 
