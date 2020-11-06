@@ -488,35 +488,6 @@ h5 {
     background-color: rgb(169, 112, 252); /* Add a dark-grey background on hover */
   }
 
-  /* ----------------- footer-area ----------------- */
+  
 
-  .footer-area img {
-      height: 75px;
-      padding: 20px 0px 0px 20px;
-  }
-
-  .footer-area p {
-    line-height: 25px;
-    font-size: 13px;
-    color: rgb(64 57 81 / 63%);
-  }
-
-  .inline-content {
-      display: flex; /*faz o conteudo ficar lado a lado*/
-  }
-
-  .r-footer {
-      margin-top: 20px;
-  }
-
-  .c-footer h4 {
-      padding-top: 20px;
-  }
-
-  .c-footer p {
-      padding-left: 0px;
-  }
-
-  .t-footer {
-    background-color: #dbdee0;
-  }
+  
