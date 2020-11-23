@@ -134,7 +134,7 @@ p {
     height: 76.6vh;
     top: 55px;
     left: 0;
-    z-index: -1;
+    /* z-index: -1; */
     position: relative;
     margin-top: -75px; /*Tira o espaço no top*/
 }
