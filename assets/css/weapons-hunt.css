@@ -63,6 +63,36 @@ p {
 
 /* ----------------- tamanho video e imagem ----------------- */
 
+@media(max-width: 1440px){
+    #player {
+        width: 590px;
+        height: 345px;
+    }
+}
+
+@media(max-width: 1200px){
+    #player {
+        width: 560px;
+        height: 300px;
+    }
+    h1 {
+        font-size: 2.5rem!important;
+    }
+}
+
+@media(max-width: 1009px){
+    #player {
+        width: 560px;
+        height: 300px;
+    }
+    h1 {
+        font-size: 2rem!important;
+    }
+    .real-name {
+        font-size: 20px!important;
+    }
+}
+
 @media(max-width: 992px){
     #player {
         width: 340px;
@@ -76,14 +106,28 @@ p {
 
 }
 
-@media(max-width: 812px){
+@media(max-width: 864px){
+    .real-name {
+        font-size: 15px!important;
+    }
+}
+
+@media(max-width: 819px){
     #imagens img {
         max-height: 300px;
         max-width: 470px;
     }
+    h1 {
+        font-size: 1.8rem!important;
+    }
 }
 
 @media(max-width: 767px){
+
+    .container {
+        padding: 0;
+    }
+
     #player {
         width: 440px;
         height: 260px;
@@ -93,6 +137,13 @@ p {
     #imagens img {
         max-height: 300px;
         max-width: 390px;
+    }
+}
+
+@media(max-width: 743px){
+
+    h1 {
+        font-size: 1.3rem!important;
     }
 }
 
