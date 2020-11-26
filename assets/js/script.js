@@ -209,7 +209,7 @@ function renderNews() {
 
                 <div class="example-2 card_ col-md-4 project-box hide-news">
                     <div id="id_news_">
-                        <a href="news/news-${task.id}.html" target="_blank">
+                        <a href="${task.id}.html" target="_blank">
                             <div class="wrapper" style="background: url(${task.foto}) center/cover no-repeat;">
                                 <div class="header">
                                     <div class="date">
