@@ -108,6 +108,7 @@ function shuffle(array) {
     return array;
   }
 
+// mostra tela do streamer de hunt
 function renderTwitch(){
 
     document.querySelector('#twitch-embed').innerHTML = ``; // limpa a div para não agrupa com algo que já exista
@@ -129,8 +130,6 @@ function renderTwitch(){
         player.play();
         player.setVolume(0.0);
     });
-
-    
 
 }
 

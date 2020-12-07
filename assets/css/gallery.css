@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card_img {             /* Tamanho do card */
+    /* width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 25px; */
+}
+
+.card_img_small {             /* Tamanho do card */
+    height: 170px;
+    margin: 10px;
+}
+
+.small_img {            /* Tamanho da imagem */
+    height: 100%;
+    cursor: pointer;
+    transition: all linear 0.2s;
+    margin-top: 0px!important;
+}
+
+.small_img:hover {
+    /*filter: grayscale(100%);     fica cinza quando mouse passa sobre a imagem */
+    transform: scale(1.1);
+}
+
+.row {
+    display: flex;      /* faz as imagens ficarem em linha */
+    justify-content: center;
+    flex-wrap: wrap;    /* evita o efeito sanfona nas imagens */
+}
+
+#modal_img {
+    width: 65vw;
+    transform: scale(0);
+    transition: all linear .3s;
+    cursor: pointer;
+}
+
+.modal_active #modal_img {
+    transform: scale(1);
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;    /* fica fixado na tela a imagem */
+    visibility: hidden;
+    z-index: 3;         /* faz o modal ficar na frente da pagina */
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btn_close {                    /*Botao de fecha */
+    color: #ffffff;
+    background-color: black;
+    position: absolute;
+    top: 80px;
+    right: 17px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border: solid 1px #fff;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+
+#btn_close:hover {
+    background-color: #f00;
+}
+
+.modal_active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
