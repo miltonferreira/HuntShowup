@@ -17,6 +17,7 @@
 
 .small_img {            /* Tamanho da imagem */
     height: 100%;
+    width: auto;
     cursor: pointer;
     transition: all linear 0.2s;
     margin-top: 0px!important;
@@ -83,4 +84,10 @@
     visibility: visible;
     opacity: 1;
     display: block;
+}
+
+@media(max-width: 819px){
+    .small_img {
+        width: 100%;
+    }
 }

@@ -109,6 +109,11 @@ p {
 }
 
 @media(max-width: 819px){
+
+    #player {
+        width: 100%;
+    }
+
     #imagens img {
         max-height: 300px;
         max-width: 470px;
@@ -125,8 +130,7 @@ p {
     }
 
     #player {
-        width: 540px;
-        height: 280px;
+        width: 100%;
     }
 
     #imagens img {
@@ -138,8 +142,7 @@ p {
 @media(max-width: 743px){
 
     #player {
-        width: 500px;
-        height: 240px;
+        width: 100%;
     }
 
     h1 {
@@ -153,6 +156,10 @@ p {
 
 @media(max-width: 617px){
 
+    #player {
+        width: 100%;
+    }
+
     #imagens img {
         max-height: 300px;
         max-width: 290px;
@@ -161,8 +168,7 @@ p {
 
 @media(max-width: 590px){
     #player {
-        width: 460px;
-        height: 240px;
+        width: 100%;
     }
 
     h1 {
