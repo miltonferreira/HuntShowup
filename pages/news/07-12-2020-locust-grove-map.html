@@ -33,15 +33,17 @@
 
     <link rel="shortcut icon" href="../../assets/img/logo1.png" type="image/x-icon">
     <title>Novo Mapa sai em 2021</title>
-     <!-- Bootstrap -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-     <!-- Outros Estilos -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Outros Estilos -->
     <link rel="stylesheet" href="../../assets/css/news-styles.css">
     <link rel="stylesheet" href="../../assets/css/navbar_old.css">
     <link rel="stylesheet" href="../../assets/css/footerbar.css">
+    <!-- Faz efeito de zoom na imagens -->
     <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <!-- Estilo Outras Noticias -->
+    <link rel="stylesheet" href="../../assets/css/moreInfos.css">
 
-    
 </head>
 <body>
     <header>
@@ -82,8 +84,8 @@
             </div>
         </div>
         <div class="row negativo">
-            <!-- texto -->
-            <div class="col-sm-9 center-content">
+            <!-- corpo da noticia -->
+            <div class="col-sm-9">  <!--Antigo <div class="col-sm-9 center-content"> -->
                 <div id="news-area" class="container">
                         <div class="container-fluid">
                             <p>
@@ -142,11 +144,10 @@
                     
                 </div>
             </div>
-            <div class="col-sm-2" style="display: none;">
-                <!-- Ads -->
-                <div id="ads-area" class="container">
-                    
-                </div>
+            <!-- mais infos -->
+            <div class="moreinfo col-sm-2 no-padding">
+                <h5 style="text-align: center;">Outras Noticias</h5>
+                
             </div>
         </div>
     </main>
@@ -183,6 +184,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="../../assets/js/firebaseConf.js"></script>
+    <script src="../../assets/js/randomInfo.js"></script>
     <!-- Google 2 -->
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

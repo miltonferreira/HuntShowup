@@ -39,8 +39,9 @@
     <link rel="stylesheet" href="../../assets/css/weapons-hunt.css">
     <link rel="stylesheet" href="../../assets/css/navbar_old.css">
     <link rel="stylesheet" href="../../assets/css/footerbar.css">
-
-    
+    <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <!-- Estilo Outras Noticias -->
+    <link rel="stylesheet" href="../../assets/css/moreInfos.css">
 </head>
 <body>
     <header>
@@ -64,6 +65,13 @@
             </div>
         </nav>
     </header>
+    <!-- Modal que fica na frente da página -->
+    <div class="modal">
+        <div class="modal_content">
+            <img src="../../assets/img/bannerHunt.jpg" alt="" id="modal_img">
+        </div>
+        <span id="btn_close">&times;</span>
+    </div>
     <main>
         <input type="hidden" id="id_news" value="23-11-2020-uppercut"/>   <!-- indica pelo id qual é a noticia que deve aparecer -->
         <div class="container-fluid">
@@ -75,8 +83,8 @@
             </div>
         </div>
         <div class="row negativo">
-            <!-- texto -->
-            <div class="col-sm-9 center-content">
+            <!-- corpo da noticia -->
+            <div class="col-sm-9">
                 <div id="news-area" class="container">
                         <div class="container-fluid">
                             <p class="real-name" style="font-size: 25px;">
@@ -87,8 +95,8 @@
                                 Ele foi projetado em 1846, fruto de uma colaboração entre o Capitão Samuel Walker e o armeiro americano Samuel Colt.
                             </p>
                         </div>
-                        <div id="imagens">
-                            <img class="center-content" src="https://www.kirstkonverter.com/colt-walker-dragoon/dragoon.jpg" alt="">
+                        <div id="imagens" class="card_img">
+                            <img class="center-content small_img" src="https://www.kirstkonverter.com/colt-walker-dragoon/dragoon.jpg" alt="">
                         </div>
                         <div class="container-fluid">
                             <p>
@@ -96,8 +104,8 @@
                                 e alcance terem sido comparados aos rifles e mosquetes da época. Walker desejava uma arma extremamente potente a curto alcance.
                             </p>
                         </div>
-                        <div id="imagens">
-                            <img class="center-content" src="https://i.ytimg.com/vi/ejTLBdZ5XLs/maxresdefault.jpg" alt="">
+                        <div id="imagens" class="card_img">
+                            <img class="center-content small_img" src="https://i.ytimg.com/vi/ejTLBdZ5XLs/maxresdefault.jpg" alt="">
                         </div>
                         <div class="container-fluid">
                             <p>
@@ -113,11 +121,10 @@
                     
                 </div>
             </div>
-            <div class="col-sm-2" style="display: none;">
-                <!-- Ads -->
-                <div id="ads-area" class="container">
-                    
-                </div>
+            <!-- mais infos -->
+            <div class="moreinfo col-sm-2 no-padding">
+                <h5 style="text-align: center;">Outras Noticias</h5>
+                
             </div>
         </div>
     </main>
@@ -144,7 +151,8 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/news.js"></script>
+    <!-- Abre modal quando clica na imagem -->
+    <script src="../../assets/js/gallery.js"></script>
     <!-- Google -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
@@ -153,6 +161,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="../../assets/js/firebaseConf.js"></script>
+    <script src="../../assets/js/randomInfo.js"></script>
     <!-- Google 2 -->
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

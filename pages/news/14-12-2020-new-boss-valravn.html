@@ -39,7 +39,10 @@
     <link rel="stylesheet" href="../../assets/css/news-styles.css">
     <link rel="stylesheet" href="../../assets/css/navbar_old.css">
     <link rel="stylesheet" href="../../assets/css/footerbar.css">
+    <!-- Faz efeito de zoom na imagens -->
     <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <!-- Estilo Outras Noticias -->
+    <link rel="stylesheet" href="../../assets/css/moreInfos.css">
 
     
 </head>
@@ -65,7 +68,7 @@
             </div>
         </nav>
     </header>
-    <!-- Galeria para imagens -->
+    <!-- Modal que fica na frente da página -->
     <div class="modal">
         <div class="modal_content">
             <img src="../../assets/img/bannerHunt.jpg" alt="" id="modal_img">
@@ -82,8 +85,8 @@
             </div>
         </div>
         <div class="row negativo">
-            <!-- texto -->
-            <div class="col-sm-9 center-content">
+            <!-- corpo da noticia -->
+            <div class="col-sm-9">
                 <div id="news-area" class="container">
                         <div class="container-fluid">
                             <p>
@@ -133,13 +136,13 @@
                     
                 </div>
             </div>
-            <div class="col-sm-2" style="display: none;">
-                <!-- Ads -->
-                <div id="ads-area" class="container">
-                    
-                </div>
+            <!-- mais infos -->
+            <div class="moreinfo col-sm-2 no-padding">
+                <h5 style="text-align: center;">Outras Noticias</h5>
+                
             </div>
         </div>
+            
     </main>
     <footer>
         <div class="footer-area container-fluid">
@@ -164,6 +167,7 @@
             </div>
         </div>
     </footer>
+    <!-- Abre modal quando clica na imagem -->
     <script src="../../assets/js/gallery.js"></script>
     <!-- Google -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -174,6 +178,7 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
     <script src="../../assets/js/firebaseConf.js"></script>
+    <script src="../../assets/js/randomInfo.js"></script>
     <!-- Google 2 -->
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

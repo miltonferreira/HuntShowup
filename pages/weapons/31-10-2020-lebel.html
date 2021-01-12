@@ -41,7 +41,10 @@
     <link rel="stylesheet" href="../../assets/css/weapons-hunt.css">
     <link rel="stylesheet" href="../../assets/css/navbar_old.css">
     <link rel="stylesheet" href="../../assets/css/footerbar.css">
-
+    <!-- Faz efeito de zoom na imagens -->
+    <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <!-- Estilo Outras Noticias -->
+    <link rel="stylesheet" href="../../assets/css/moreInfos.css">
     
 </head>
 <body>
@@ -66,6 +69,13 @@
             </div>
         </nav>
     </header>
+    <!-- Modal que fica na frente da página -->
+    <div class="modal">
+        <div class="modal_content">
+            <img src="../../assets/img/bannerHunt.jpg" alt="" id="modal_img">
+        </div>
+        <span id="btn_close">&times;</span>
+    </div>
     <main>
         <input type="hidden" id="id_news" value="31-10-2020-lebel"/>   <!-- indica pelo id qual é a noticia que deve aparecer -->
         <div class="container-fluid">
@@ -78,8 +88,8 @@
         </div>
         
         <div class="row negativo">
-            <!-- texto -->
-            <div class="col-sm-9 center-content">
+            <!-- corpo da noticia -->
+            <div class="col-sm-9"> <!-- <div class="col-sm-9 center-content"> -->
                 <div id="news-area" class="container">
                         <div class="container-fluid">
                             <p>
@@ -92,8 +102,8 @@
                                 O rifle Lebel tem a distinção de ser a primeira arma de fogo militar a usar munição de pólvora sem fumaça.
                             </p>
                         </div>
-                        <div id="imagens">
-                            <img class="center-content" src="https://pm1.narvii.com/6673/99788ead770c92ed401ae8f482483196e3043c60_hq.jpg" alt="">
+                        <div id="imagens" class="card_img">
+                            <img class="center-content small_img" src="https://pm1.narvii.com/6673/99788ead770c92ed401ae8f482483196e3043c60_hq.jpg" alt="">
                         </div>
                         <div class="container-fluid">
                             <p>
@@ -113,8 +123,8 @@
                                 spitzer e cauda de barco "Balle D". No entanto, o rifle Lebel tinha suas falhas:
                             </p>
                         </div>
-                        <div id="imagens">
-                            <img class="center-content" src="https://i.pinimg.com/originals/39/50/a4/3950a4cca3ea97fd791c2532b3061200.png" alt="">
+                        <div id="imagens" class="card_img">
+                            <img class="center-content small_img" src="https://i.pinimg.com/originals/39/50/a4/3950a4cca3ea97fd791c2532b3061200.png" alt="">
                         </div>
                         <div class="container-fluid">
                             <p>
@@ -135,11 +145,10 @@
                     
                 </div>
             </div>
-            <div class="col-sm-2" style="display: none;">
-                <!-- Ads -->
-                <div id="ads-area" class="container">
-                    
-                </div>
+            <!-- mais infos -->
+            <div class="moreinfo col-sm-2 no-padding">
+                <h5 style="text-align: center;">Outras Noticias</h5>
+                
             </div>
         </div>
     </main>
@@ -166,7 +175,8 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/news.js"></script>
+    <!-- Abre modal quando clica na imagem -->
+    <script src="../../assets/js/gallery.js"></script>
     <!-- Google -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
@@ -175,6 +185,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="../../assets/js/firebaseConf.js"></script>
+    <script src="../../assets/js/randomInfo.js"></script>
     <!-- Google 2 -->
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

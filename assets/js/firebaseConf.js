@@ -15,4 +15,4 @@ function connectFirebase() {
     firebase.analytics();
 }
 
-connectFirebase();  // Inicializa credenciais para conectar ao firebase
+//connectFirebase();  // Inicializa credenciais para conectar ao firebase

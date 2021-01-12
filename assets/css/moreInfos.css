@@ -1,0 +1,51 @@
+/* ----------------- card de outras noticias ----------------- */
+
+.moreinfo a {
+    color: rgb(195 32 35);
+}
+
+.moreinfo a:hover {
+    text-decoration: none;
+    color: #ff8592;
+}
+
+.card-text {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.card-img-more {             /* Tamanho do card */
+    overflow: hidden;
+}
+
+.card-body-more-info {
+    padding: .35rem;
+    padding-bottom: 15px;
+}
+
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.with-padding {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.card-title {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.margin-card{
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px){
+    .col-sm-2 {
+        -ms-flex: none;
+        flex: none;
+        max-width: 65%;
+    }
+}
