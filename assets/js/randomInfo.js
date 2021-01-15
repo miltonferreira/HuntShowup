@@ -23,6 +23,11 @@ class randomInfo {
             });
 
             this.shuffle(this._randInf);
+
+            // diminui o tamanho do array até fica somente com 3 elementos
+            while(this._randInf.length > 3){
+                this._randInf.pop();
+            }
             
             // mostra as noticias na pagina
             this.renderInfo();
@@ -39,7 +44,7 @@ class randomInfo {
     
             li.innerHTML = `
 
-                <a href="https://huntshowup.com/${task.id}" target="_blank" >
+                <a href="https://huntshowup.com/${task.id}.html" target="_blank" >
                 <div class="card margin-card bg-dark ">
                     <div class="card-img-more">
                         <img src="${task.foto}" class="card-img-top small_img" alt="..." style="width: 100%;">
