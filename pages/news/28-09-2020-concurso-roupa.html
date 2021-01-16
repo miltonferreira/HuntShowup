@@ -12,25 +12,44 @@
     hunt steam, hunt twitch, twitch, hunt discord, tutorial hunt, tutorial hunt showdown, armas hunt, 
     hunt armas, weapons hunt, weapon hunt showdown, skin hunt">
 
-    <meta property="og:description" content="Veja as imagens e descrição dos criadores das roupas."/>
-    <meta property="og:image" content="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/5fab926996eb4eaeb4f5d03ca5b2f184.png"/>
+    <!-- meta da noticia -->
     <meta property="og:title" content="Vencedores do concurso de roupas do Hunt Showdown"/>
-    <meta property="og:site_name" content="Hunt Showup"/>
+    <meta property="og:description" content="Veja as imagens e descrição dos criadores das roupas."/>
+    <meta property="og:url" content="https://huntshowup.com/pages/news/28-09-2020-concurso-roupa.html">
+    <meta property="og:image" content="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/5fab926996eb4eaeb4f5d03ca5b2f184.png"/>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="article">
+
+    <!-- meta card twitter -->
+    <meta name="twitter:site" content="@Huntshowup"/>
+    <meta name="twitter:creator" content="@Huntshowup"/>
+    <meta name="twitter:url" content="https://huntshowup.com/pages/news/28-09-2020-concurso-roupa.html"/>
+    <meta name="twitter:domain" content="https://huntshowup.com/" />
+    <meta name="twitter:title" content="Vencedores do concurso de roupas do Hunt Showdown"/>
+    <meta name="twitter:description" content="Veja as imagens e descrição dos criadores das roupas."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/5fab926996eb4eaeb4f5d03ca5b2f184.png"/>
 
     <link rel="shortcut icon" href="../assets/img/logo1.png" type="image/x-icon">
     <title>Vencedores do concurso de roupas do Hunt Showdown</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/news.css">
-    <link rel="stylesheet" href="../assets/css/navbar_old.css">
-    <link rel="stylesheet" href="../assets/css/footerbar.css">
-    <link rel="stylesheet" href="../assets/css/timeline.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Outros Estilos -->
+    <link rel="stylesheet" href="../../assets/css/weapons-hunt.css">
+    <link rel="stylesheet" href="../../assets/css/navbar_old.css">
+    <link rel="stylesheet" href="../../assets/css/footerbar.css">
+    <!-- Faz efeito de zoom na imagens -->
+    <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <!-- Estilo Outras Noticias -->
+    <link rel="stylesheet" href="../../assets/css/moreInfos.css">
 
     
 </head>
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="../index.html"><img id="logoHunt" src="../assets/img/Home-icon.png" alt="Logo Hunt Showdown"></a>
+            <a class="navbar-brand" href="../index.html"><img id="logoHunt" src="../../assets/img/Home-icon.png" alt="Logo Hunt Showdown"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,23 +68,36 @@
             </div>
         </nav>
     </header>
+    <!-- Modal que fica na frente da página -->
+    <div class="modal">
+        <div class="modal_content">
+            <img src="../../assets/img/bannerHunt.jpg" alt="" id="modal_img">
+        </div>
+        <span id="btn_close">&times;</span>
+    </div>
     <main>
-        <div class="container">
-            <input type="hidden" id="id_news" value="8"/>   <!-- indica pelo id qual é a noticia que deve aparecer -->
+        <div class="container-fluid">
+            <div class="news-img-top" style="height: 60vh;  background: url(https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/b51ae0ce810d47eea1ae6b3ceeb40b7d.png) repeat scroll top center / cover !important">
+                <div class="news-tittle-top">
+                    <h1>Vencedores do concurso de roupas</h1>
+                </div>
+            </div>
+        </div>
 
-            <ul>
-                <div class="list-group-item">
-                    <p class="new-date">28/09/2020 - 04:35</p>
-                    <h1>Vencedores do concurso de roupas do Hunt Showdown</h1>
-                    <p>
+        <div class="row negativo">
+            <!-- corpo da noticia -->
+            <div class="col-sm-9">
+                <div id="news-area" class="container">             
+                    <p style="padding-left: 0px; padding-right: 0px; padding-bottom: 25px;">
                         Organizado pelos desenvolvedores do game e a equipe da Marvelous Designer, software focado na modelagem 3D de roupas para games, moda e cinema.
                         Elegeu os vencedores na categoria amoradora e profissional.
                     </p>
                     <h4>Categoria: Amador</h4>
                     <br>
                     <h5>Primeiro lugar: Shaafi Ahmed - “The Shikari"</h5>
-                    <img style="height: 400px;" src="https://www.huntshowdown.com/files/wysiwyg/dbd6c0186879f0938f07adf06488df4c.jpg" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://www.huntshowdown.com/files/wysiwyg/dbd6c0186879f0938f07adf06488df4c.jpg" alt="">
+                    </div>
                     <p>
                         No subcontinente indiano, Mir Alamgir é um veterano de uma unidade especial britânica encarregada de explorar os mistérios e 
                         eliminar monstros. Sua unidade lutou até quase a aniquilação total e foi dissolvida, ele vagueia e caça monstros 
@@ -79,8 +111,9 @@
                         <a href="https://www.artstation.com/shaafi" target="_blank">Acesse seu portfólio</a>
                     </p>
                     <h5>Segundo lugar: Ana Zlatkovic - “Victoria"</h5>
-                    <img style="height: 400px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/d1fc113e047f4cfebce8cc1f8c47a1f3.jpg" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/d1fc113e047f4cfebce8cc1f8c47a1f3.jpg" alt="">
+                    </div>
                     <p>
                         Victoria viveu uma vida confortável e cheia de muito luxo, mas a chegada dos demonios e zumbis tirou tudo dela.
                         O desejo de recuperar o controle e voltar aos velhos hábitos preferidos, a motivou a se juntar aos caçadores. 
@@ -96,8 +129,9 @@
                         <a href="http://anazlatkovic.com/" target="_blank">Acesse seu portfólio</a>
                     </p>
                     <h5>Terceiro lugar: Christian Zollinger - “The Gentleman Fatal"</h5>
-                    <img style="height: 400px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/b51ae0ce810d47eea1ae6b3ceeb40b7d.png" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/b51ae0ce810d47eea1ae6b3ceeb40b7d.png" alt="">
+                    </div>
                     <p>
                         Eu tive a ideia de um caçador de safári britânico muito elegante e rico que já viu de tudo e tem troféus de todos os grandes animais 
                         em suas paredes. Agora ele está de partida para novas aventuras, querendo a cabeça de monstros em solo americano. 
@@ -113,8 +147,9 @@
                     <h4>Categoria: Profissional</h4>
                     <br>
                     <h5>Primeiro lugar: Andrzej Rać - “Once a wife"</h5>
-                    <img style="height: 400px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/5fab926996eb4eaeb4f5d03ca5b2f184.png" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/5fab926996eb4eaeb4f5d03ca5b2f184.png" alt="">
+                    </div>
                     <p>
                         Ela tinha um marido, uma fazenda, dois gatos e um cachorro. Tudo estava perfeito, até ela ouviu o grito do seu marido vindo 
                         de trás do celeiro. Sem pensar duas vezes, ela pegou uma Colt da gaveta da cozinha, mas não encontrou nada, exceto o chapéu de Tom na poça 
@@ -132,7 +167,9 @@
                         <a href="https://www.artstation.com/andrzej_rac" target="_blank">Acesse seu portfólio</a>
                     </p>
                     <h5>Segundo lugar: Nilberto Tawata - “Huntress"</h5>
-                    <img style="height: 500px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/dd00daa3d0554c7fb088777aba557fc3.jpg" alt="">
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" style="max-height: 400px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/dd00daa3d0554c7fb088777aba557fc3.jpg" alt="">
+                    </div>
                     <br>
                     <p>
                         Huntress é um mashup de muitas referências do século XIX. Forte, bonita e sábia, ela gosta de roupas bonitas enquanto caça monstros e inimigos. 
@@ -146,8 +183,9 @@
                         <a href="https://www.artstation.com/nilbertotawata" target="_blank">Acesse seu portfólio</a>
                     </p>
                     <h5>Terceiro lugar: John Miller - “Mother Russia (Xenia)"</h5>
-                    <img style="height: 500px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/106519ab8de345f782163cc2eb8cb110.jpg" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" style="max-height: 400px;" src="https://s3.amazonaws.com/s3.md.web.upload/mdweb/News/202009/106519ab8de345f782163cc2eb8cb110.jpg" alt="">
+                    </div>
                     <p>
                         Mãe Rússia (Xenia) é uma princesa obscura russa que veio se juntar à caça. Suas habilidades de caçar suas presas são aumentadas por suas 
                         habilidades como bruxa, dando a ela poderes sobrenaturais à noite. Isso inclui visão noturna, percepção do pensamento e aumento da velocidade. 
@@ -162,45 +200,79 @@
                     <p>
                         <a href="https://www.artstation.com/regnan" target="_blank">Acesse seu portfólio</a>
                     </p>
-                    <br>
                     <h4>Menções Honrosas</h4>
-                    <br>
+                    
                     <p>
                         Alguns outros artistas publicaram suas artes no discord oficial do hunt, mas não foram os vencedores, mesmo assim o resultado final ficou muito bom.
                         Merecendo um destaque pela criatividade:
                     </p>
-                    <img style="height: 400px;" src="https://cdn.discordapp.com/attachments/350220022196469768/754943108034068640/Strauman_Final.jpg" alt="">
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://cdn.discordapp.com/attachments/350220022196469768/754943108034068640/Strauman_Final.jpg" alt="">
+                    </div>
                     <br>
-                    <img style="height: 400px;" src="https://cdna.artstation.com/p/assets/images/images/030/276/158/large/svend-richter-llachlan-saltie-rivers-render-01-front.jpg?1600120368" alt="">
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" style="max-height: 400px;" src="https://cdna.artstation.com/p/assets/images/images/030/276/158/large/svend-richter-llachlan-saltie-rivers-render-01-front.jpg?1600120368" alt="">
+                    </div>
                     <br>
-                    <img style="height: 400px;" src="https://cdn.discordapp.com/attachments/350220022196469768/755483282199806170/Final1.jpg" alt="">
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" style="max-height: 400px;" src="https://cdn.discordapp.com/attachments/350220022196469768/755483282199806170/Final1.jpg" alt="">
+                    </div>
                     <br>
-                    <img style="height: 400px;" src="https://cdnb.artstation.com/p/assets/images/images/030/313/355/4k/andrey-ryzhov-hunt-md-general-texturing-sides-arz.jpg?1600229436" alt="">
-                    <br>
+                    <div id="imagens" class="card_img">
+                        <img class="center-content small_img" src="https://cdnb.artstation.com/p/assets/images/images/030/313/355/4k/andrey-ryzhov-hunt-md-general-texturing-sides-arz.jpg?1600229436" alt="">
+                    </div>
                     <p>
                         Todos os textos e imagens foram tirados do site do <a href="https://www.huntshowdown.com/news/hunt-showdown-x-marvelous-designer-contest-winners" target="_blank">hunt showdown</a> e <a href="https://www.marvelousdesigner.com/company/news/view/53" target="_blank">marvelous designer</a>.
                     </p>
                 </div>
-            </ul>
-
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
-
-            <!-- TODO: Add SDKs for Firebase products that you want to use
-                https://firebase.google.com/docs/web/setup#available-libraries -->
-            <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
-
-            
+            </div>
+            <!-- mais infos -->
+            <div class="moreinfo col-sm-2 no-padding">
+                <h5 style="text-align: center;">Outras Noticias</h5>
+                
+            </div>
         </div>
+    
         <div class="ads" style="display: none;">
             <img src="../assets/img/ad.jpg" alt="">
         </div>
     </main>
     <footer>
-        <p>Todos os direitos reservados - 2020</p>
+        <div class="footer-area container-fluid">
+            <div class="row">
+                <div class="col-md-6 inline-content r-footer">
+                    <img src="../../assets/img/logo1.png" alt="Logo HuntShowup">
+                    <p>O site huntshowup e comunidade no discord não possuem vinculo com o jogo Hunt Showdown. Somos jogadores que gostam do game e visam ajudar o crescimento do mesmo no Brasil.</p>
+                </div>
+                <div class="col-md-6 c-footer">
+                    <h4>Contatos</h4>
+                    <p><b>Web Developer</b> - Email: jotonferreira@gmail.com
+                    <br>
+                    <b>Administrador da comunidade</b> - Email: twitch.tv-tche_barbaridade@trivilin.com.br
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area container-fluid t-footer">
+            <div class="col-md-12">
+                <hr>
+                <p style="text-align: center;">Todos os direitos reservados - 2020</p>
+            </div>
+        </div>
     </footer>
-    <script src="../assets/js/news.js"></script>
+    <!-- Abre modal quando clica na imagem -->
+    <script src="../../assets/js/gallery.js"></script>
+    <!-- Google -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="../../assets/js/firebaseConf.js"></script>
+    <script src="../../assets/js/randomInfo.js"></script>
+    <!-- Google 2 -->
     <script data-ad-client="ca-pub-9302368515388477" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
