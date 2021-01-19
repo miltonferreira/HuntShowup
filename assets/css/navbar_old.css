@@ -18,6 +18,10 @@
     padding: 0 5px;
 }
 
+.fixed-top {
+    z-index: 3;
+}
+
 /* ---------- nav ------------- */
 
 .navbar{

@@ -40,7 +40,7 @@ $(document).ready(function(){ // só executa o codigo quando a página carregar 
 
 });
 
-console.log(document.documentElement.scrollTop);
+// console.log(document.documentElement.scrollTop);
 
 //Get the button:
 mybutton = document.getElementById("myBtn");

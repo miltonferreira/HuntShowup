@@ -49,9 +49,11 @@ function readFiles(){
             }
 
             if(key == "news"){
-                data.forEach(item => {
+                
+                Object.values(data).forEach(item => {
                     news.push(item);              // add a data no JSON
                 });
+                
             }
 
             if(key == "streamers"){
@@ -140,8 +142,6 @@ function showIconTwitch(){
 
     var graphElem = document.querySelectorAll('.streamer_card a');
 
-    console.log("Ronaldo");
-
     for(let q of graphElem){
 
         q.addEventListener('mouseover', function (event) {
@@ -203,7 +203,7 @@ function renderNews() {
                 
             `;
 
-        } else {
+        } else {    // hide-news remove do mobile a terceira news
             li.innerHTML = `
 
                 <div class="example-2 card_ col-md-4 project-box hide-news">

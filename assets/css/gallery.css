@@ -36,10 +36,11 @@
 }
 
 #modal_img {
-    width: 65vw;
+    width: 50vw;
     transform: scale(0);
     transition: all linear .3s;
     cursor: pointer;
+    z-index: 5;         /* faz o modal ficar na frente da pagina */
 }
 
 .modal_active #modal_img {
@@ -68,8 +69,8 @@
     color: #ffffff;
     background-color: black;
     position: absolute;
-    top: 80px;
-    right: 17px;
+    top: 20px;
+    right: 30px;
     padding: 5px 10px;
     font-size: 25px;
     border: solid 1px #fff;
