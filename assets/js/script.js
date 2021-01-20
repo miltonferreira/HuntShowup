@@ -49,7 +49,6 @@ function readFiles(){
             }
 
             if(key == "news"){
-                
                 Object.values(data).forEach(item => {
                     news.push(item);              // add a data no JSON
                 });
@@ -68,19 +67,11 @@ function readFiles(){
 
             }
 
-            // console.log(key, data);
-            
-            // se o arquivo tem o type mostra o arquivo para o usuario
-            // if(data.type){
-            //     this.listFilesEl.appendChild(this.getFileView(data, key));
-            // }
-
         })
 
         resetStreamers = 1;     // indica que o array streamers já tem infos
 
-        // console.log(streamers);
-        // console.log(news);
+        orderByTimeStamp(news); // orderna as posiçoes dos elementos pelo timestamp
         
         renderTwitch();         // chama novamente função atualizada com o novo valor
         renderNews();           // chama novamente função atualizada com o novo valor
@@ -156,19 +147,30 @@ function showIconTwitch(){
 
 }
 
+function orderByTimeStamp(array){
+    //news.reverse();         // inverte as posições do array
+
+    // empurra o maior timestamp pra frente do array
+    array.sort(function (a, b) {
+        if (a.timestamp > b.timestamp) {
+          return -1;
+        }
+        if (a.timestamp < b.timestamp) {
+          return 1;
+        }
+        // a must be equal to b
+        return 0;
+      });
+
+}
+
 function renderNews() {
     
     document.querySelector('.news-container').innerHTML = ''; //limpa a lista para não repetir quando add nova tarefa
-
-    // console.log(news.length);
-
-    news.reverse();         // inverte as posições do array
     
     if(news.length > 3){    // evita que tenha mais que 3 noticias no feed
         news.splice(3);     // remove o quarto item a diante, limitando a 3 itens no array
     }
-
-    // console.log(news.length);
 
     news.forEach(task => {
 
@@ -242,14 +244,6 @@ function renderNews() {
 
 // carrega os dados para os cards do streamers
 function renderStreamers() {
-    
-    //document.querySelector('.streamers_cards').innerHTML = ''; // limpa a lista para não repetir quando add nova tarefa
-
-    // if(streamers.length > 3){
-    //     streamers.reverse();
-    //     streamers.splice(3);
-        
-    // }
 
     shuffle(streamers); // embaralha as posições dos streamers e retorna para o array
 
@@ -278,12 +272,6 @@ function renderStreamers() {
                 
             `;
 
-
-        // li.querySelector('a').addEventListener('click', e => {
-        //     dataNews = task;
-        //     localStorage.setItem("news", JSON.stringify(task)); // converte para string
-        // });
-
         document.querySelector('#streamers-area .row').append(li);
 
     });
@@ -302,5 +290,3 @@ function convertToDate(time){
 connectFirebase();  // credenciais para conectar ao firebase
 readFiles();
 
-
-//console.log(getComputedStyle(document.querySelector('.wrap a'), ':before').getPropertyValue('z-index'));
