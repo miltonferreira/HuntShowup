@@ -89,6 +89,11 @@ h5 {
     margin-right: 0px;
     margin-left: 0px;
 }
+@media(max-width: 425px){
+    .container {
+        padding: 10px 0px 10px 0px;
+    }
+}
 
 /* ----------------- Stream Ao vivo ----------------- */
 
@@ -310,6 +315,24 @@ h5 {
         /* -ms-flex: 0 0 16.666667%;
         flex: 0 0 16.666667%; */
         max-width: 26%;
+    }
+}
+
+@media(max-width: 476px){
+    .col-md-2 {
+        max-width: 35%;
+    }
+}
+
+@media(max-width: 425px){
+    .col-md-2 {
+        max-width: 40%;
+    }
+}
+
+@media(max-width: 326px){
+    .col-md-2 {
+        max-width: 50%;
     }
 }
 
