@@ -511,6 +511,11 @@ h5 {
     background-color: rgb(169, 112, 252); /* Add a dark-grey background on hover */
   }
 
-  
+/* arruma por enquanto banner evento*/  
+
+.banner-monster {
+    padding-left: 250px;
+    padding-top: 100px;
+}
 
   
