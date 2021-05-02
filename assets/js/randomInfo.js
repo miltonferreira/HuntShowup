@@ -48,7 +48,7 @@ class randomInfo {
                 <div class="card margin-card bg-dark ">
                     <div class="card-img-more">
                         <img src="${task.foto}" class="card-img-top small_img" alt="..." style="width: 100%;">
-                        </div>
+                    </div>
                     <div class="card-body card-body-more-info">
                     <h6 class="card-title with-padding">${task.titulo}</h6>
                     <p class="card-text with-padding"><small class="text-muted">${task.texto}</small></p>
@@ -65,7 +65,7 @@ class randomInfo {
     }
 
     
-    // embaralha as posições dos streamers
+    // embaralha as posições dos cards de noticias
     shuffle(array) {
         var m = array.length, t, i;
     

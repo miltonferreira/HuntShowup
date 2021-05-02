@@ -3,9 +3,9 @@ let twitch = [];
 
 let news = [];
 
-let streamers = [];     // array que recebe os streamers no firebase
+let streamers = [];         // array que recebe os streamers no firebase
 
-let resetStreamers = 0; // caso atualiza o "streamers" esse let serve para limpa o array
+let resetStreamers = 0;     // caso atualiza o "streamers" esse let serve para limpa o array
 
 let countNews = 0;          // let para pegar a terceira noticia
 
@@ -161,7 +161,6 @@ function orderByTimeStamp(array){
         // a must be equal to b
         return 0;
       });
-
 }
 
 function renderNews() {
@@ -276,6 +275,12 @@ function renderStreamers() {
 
     });
 
+}
+
+// chama pagina de mais noticias ao clicar no botao "Mais noticias"
+function btnMoreNews(){
+
+    window.location.replace('newsList.html');
 }
 
 function convertToDate(time){

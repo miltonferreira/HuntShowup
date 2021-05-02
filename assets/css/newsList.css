@@ -1,0 +1,53 @@
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: #343a40;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    color: rgb(195 32 35);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.card a:hover {
+    color: #ff8592;
+}
+
+#news-area p {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-body {
+    padding-top: .25rem;
+    padding-bottom: .8rem;
+}
+
+.card-date {
+    margin-top: 8px;
+    margin-bottom: 20px!important;
+}
+
+.card-date small {
+    color: white;
+    background: #00000066;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+.zoom_img {            /* Tamanho da imagem */
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.zoom_img:hover {
+    transform: scale(1.1);
+}
