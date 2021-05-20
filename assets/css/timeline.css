@@ -146,10 +146,13 @@
   /* Variables */
   /* Base */
   body {
-    background: #252827;
+    background: #0c1013;
     font-size: 16px;
   }
-  p {
+  .container {
+    background-color: unset;
+  }
+  .event p {
     font-weight: 300;
     padding-left: 0px!important;
   }
@@ -230,6 +233,14 @@
 
   .event img {
     height: 200px;
+  }
+
+  .c-content {
+    text-align: center;
+  }
+
+  .c-content p {
+    padding-right: unset!important;
   }
 
   @media (max-width: 1199px) 

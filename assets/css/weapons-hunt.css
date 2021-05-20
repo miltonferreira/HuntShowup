@@ -180,7 +180,7 @@ p {
         font-size: 1.2rem!important;
     }
     .news-img-top {
-        height: 64vh!important;
+        height: 46vh!important;
     }
 }
 
@@ -194,6 +194,13 @@ p {
     #imagens img {
         max-height: 300px;
         max-width: 200px;
+    }
+    
+}
+
+@media(max-width: 375px){
+    .news-img-top {
+        height: 53vh!important;
     }
 }
 
