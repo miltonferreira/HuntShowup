@@ -1,6 +1,22 @@
 let json = `
     [{
     "video": [{
+        "url": "https://img.youtube.com/vi/i2IaMTe_4Lg/hqdefault.jpg",
+        "href":"https://www.youtube.com/watch?v=i2IaMTe_4Lg",
+        "src":"https://trucao.com.br/wp-content/uploads/2018/07/youtube-logo.png"
+    },{
+        "url": "https://img.youtube.com/vi/yhWjtOSFXTk/hqdefault.jpg",
+        "href":"https://www.youtube.com/watch?v=yhWjtOSFXTk",
+        "src":"https://trucao.com.br/wp-content/uploads/2018/07/youtube-logo.png"
+    },{
+        "url": "https://img.youtube.com/vi/7KSisEVSO1Y/hqdefault.jpg",
+        "href":"https://www.youtube.com/watch?v=7KSisEVSO1Y",
+        "src":"https://trucao.com.br/wp-content/uploads/2018/07/youtube-logo.png"
+    },{
+        "url": "https://img.youtube.com/vi/qrSPsIwNvVA/hqdefault.jpg",
+        "href":"https://www.youtube.com/watch?v=qrSPsIwNvVA",
+        "src":"https://trucao.com.br/wp-content/uploads/2018/07/youtube-logo.png"
+    },{
         "url": "https://img.youtube.com/vi/1ax9522_BGM/hqdefault.jpg",
         "href":"https://www.youtube.com/watch?v=1ax9522_BGM",
         "src":"https://trucao.com.br/wp-content/uploads/2018/07/youtube-logo.png"

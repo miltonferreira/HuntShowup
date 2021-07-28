@@ -18,8 +18,9 @@ footer p {
 /* ----------------- footer-area ----------------- */
 
 .footer-area img {
-    height: 75px;
-    padding: 20px 0px 0px 20px;
+    height: 60px;
+    /* padding: 20px 0px 0px 20px; */
+    border-radius: 50%;
 }
 
 .footer-area p {
